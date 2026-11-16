@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>청소예술가 | 호텔·공유오피스 · 사옥·병의원·전문직 사무실 정기 위탁 청소</title>
-  <meta name="description" content="서울 강남·서초 중심으로 호텔, 레지던스, 공유오피스, 사옥, 병의원, 법무·회계·세무법인의 정기 위탁 청소를 맡는 청소예술가. 상주·순회 운영부터 결원 대체, 세금계산서 정산까지 한 곳에서 책임집니다." />
+  <meta name="description" content="서울 강남·서초 중심으로 호텔, 레지던스, 공유오피스, 사옥, 병의원, 법무·회계·세무법인의 정기 위탁 청소를 맡는 청소예술가. 진단부터 마감 점검까지 실제 작업 사진과 함께 확인하십시오." />
   <meta property="og:title" content="청소예술가 | 공간의 품격을 아는 정기 위탁 청소" />
-  <meta property="og:description" content="호텔·레지던스, 공유오피스·사옥, 병의원·전문직 사무실 정기 위탁 청소. 실제 작업 현장 사진으로 확인하십시오." />
+  <meta property="og:description" content="한 현장이 깨끗해지는 순서를 실제 작업 사진으로 담았습니다. 호텔·레지던스, 공유오피스·사옥, 병의원 정기 위탁 청소." />
   <meta property="og:image" content="assets/hero-residence.jpg" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -26,9 +26,8 @@
       --navy-soft: #17233d;
       --accent: #0f766e;
       --accent-soft: #e7f4f1;
-      --gold: #a67c3d;
       --radius: 18px;
-      --shadow: 0 18px 45px rgba(16, 24, 40, 0.09);
+      --shadow: 0 20px 50px rgba(16, 24, 40, 0.10);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,7 +36,7 @@
       font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       color: var(--ink);
       background: var(--bg);
-      line-height: 1.68;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       word-break: keep-all;
     }
@@ -45,787 +44,257 @@
     img { display: block; max-width: 100%; }
     .serif { font-family: 'Noto Serif KR', 'Pretendard Variable', serif; }
 
-    .container {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
     /* 머리글 */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 60;
-      background: rgba(247, 246, 242, 0.86);
+      position: sticky; top: 0; z-index: 60;
+      background: rgba(247, 246, 242, 0.88);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(229, 227, 220, 0.9);
     }
-    .nav {
-      height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      font-weight: 800;
-      font-size: 19px;
-      letter-spacing: -0.03em;
-      color: var(--navy);
-    }
+    .nav { height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 19px; letter-spacing: -0.03em; color: var(--navy); }
     .brand-badge {
-      width: 36px;
-      height: 36px;
-      border-radius: 11px;
-      background: var(--navy);
-      color: #e7f4f1;
-      display: grid;
-      place-items: center;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0;
+      width: 36px; height: 36px; border-radius: 11px; background: var(--navy);
+      color: #e7f4f1; display: grid; place-items: center; font-size: 15px; font-weight: 700;
     }
-    .brand small {
-      display: block;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--subtle);
-      margin-top: -3px;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      font-size: 14.5px;
-      font-weight: 600;
-      color: var(--muted);
-    }
+    .brand small { display: block; font-size: 11px; font-weight: 600; color: var(--subtle); margin-top: -3px; }
+    .nav-links { display: flex; align-items: center; gap: 30px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
     .nav-links a { transition: color .15s ease; }
     .nav-links a:hover { color: var(--accent); }
     .nav-cta {
-      padding: 11px 20px;
-      border-radius: 999px;
-      background: var(--navy);
-      color: #fff !important;
-      font-size: 13.5px;
-      font-weight: 700;
-      transition: transform .15s ease, background .15s ease;
+      padding: 11px 20px; border-radius: 999px; background: var(--navy); color: #fff !important;
+      font-size: 13.5px; font-weight: 700; transition: transform .15s ease, background .15s ease;
     }
     .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
 
     /* 첫 화면 */
-    .hero {
-      position: relative;
-      color: #fff;
-      background: var(--navy);
-      overflow: hidden;
-      isolation: isolate;
-    }
-    .hero-media {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-    }
-    .hero-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 58% 55%;
-      filter: saturate(0.94);
-    }
+    .hero { position: relative; color: #fff; background: var(--navy); overflow: hidden; isolation: isolate; }
+    .hero-media { position: absolute; inset: 0; z-index: -2; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 55%; filter: saturate(0.94); }
     .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(100deg, rgba(8, 15, 28, 0.95) 0%, rgba(8, 15, 28, 0.84) 42%, rgba(8, 15, 28, 0.46) 68%, rgba(8, 15, 28, 0.22) 100%);
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(100deg, rgba(8,15,28,.95) 0%, rgba(8,15,28,.84) 42%, rgba(8,15,28,.46) 68%, rgba(8,15,28,.22) 100%);
     }
-    .hero-inner {
-      padding: 106px 24px 94px;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
+    .hero-inner { padding: 106px 24px 94px; max-width: 1180px; margin: 0 auto; }
     .hero-copy { max-width: 650px; }
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 12.5px;
-      font-weight: 600;
-      color: #9fe3d8;
-      margin-bottom: 26px;
+      display: inline-flex; align-items: center; gap: 10px; padding: 7px 16px; border-radius: 999px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+      font-size: 12.5px; font-weight: 600; color: #9fe3d8; margin-bottom: 26px;
     }
-    .eyebrow::before {
-      content: "";
-      width: 6px; height: 6px; border-radius: 50%;
-      background: #2dd4bf;
-      box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.18);
-    }
-    .hero h1 {
-      font-size: clamp(30px, 3.9vw, 50px);
-      line-height: 1.26;
-      letter-spacing: -0.035em;
-      font-weight: 800;
-      margin-bottom: 22px;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: #5eead4;
-    }
-    .hero p.lead {
-      font-size: 16.5px;
-      line-height: 1.78;
-      color: #d3dae6;
-      max-width: 560px;
-      margin-bottom: 34px;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 42px;
-    }
+    .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #2dd4bf; box-shadow: 0 0 0 4px rgba(45,212,191,.18); }
+    .hero h1 { font-size: clamp(30px, 3.9vw, 50px); line-height: 1.26; letter-spacing: -0.035em; font-weight: 800; margin-bottom: 22px; }
+    .hero h1 em { font-style: normal; color: #5eead4; }
+    .hero p.lead { font-size: 16.5px; line-height: 1.78; color: #d3dae6; max-width: 560px; margin-bottom: 34px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 42px; }
     .btn-primary {
-      padding: 16px 28px;
-      border-radius: 12px;
-      background: #14b8a6;
-      color: #04231f;
-      font-weight: 800;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
+      padding: 16px 28px; border-radius: 12px; background: #14b8a6; color: #04231f; font-weight: 800;
+      font-size: 15px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 9px;
       transition: transform .15s ease, background .15s ease;
     }
     .btn-primary:hover { background: #2dd4bf; transform: translateY(-2px); }
     .btn-secondary {
-      padding: 16px 24px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.26);
-      color: #fff;
-      font-weight: 700;
-      font-size: 15px;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
+      padding: 16px 24px; border-radius: 12px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.26);
+      color: #fff; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: 9px;
       transition: background .15s ease;
     }
-    .btn-secondary:hover { background: rgba(255, 255, 255, 0.14); }
-
+    .btn-secondary:hover { background: rgba(255,255,255,.14); }
     .hero-facts {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border-top: 1px solid rgba(255, 255, 255, 0.16);
-      padding-top: 26px;
-      max-width: 790px;
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+      border-top: 1px solid rgba(255,255,255,.16); padding-top: 26px; max-width: 790px;
     }
     .hero-fact { padding-right: 20px; }
-    .hero-fact + .hero-fact { padding-left: 20px; border-left: 1px solid rgba(255, 255, 255, 0.14); }
-    .hero-fact strong {
-      display: block;
-      font-size: 14.5px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.01em;
-    }
-    .hero-fact span {
-      display: block;
-      font-size: 12.5px;
-      color: #a7b2c3;
-      margin-top: 3px;
-    }
+    .hero-fact + .hero-fact { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.14); }
+    .hero-fact strong { display: block; font-size: 14.5px; font-weight: 700; color: #fff; }
+    .hero-fact span { display: block; font-size: 12.5px; color: #a7b2c3; margin-top: 3px; }
     .hero-credit {
-      position: absolute;
-      right: 24px;
-      bottom: 20px;
-      font-size: 11.5px;
-      color: rgba(255, 255, 255, 0.62);
-      display: flex;
-      align-items: center;
-      gap: 7px;
+      position: absolute; right: 24px; bottom: 20px; font-size: 11.5px; color: rgba(255,255,255,.62);
+      display: flex; align-items: center; gap: 7px;
     }
-    .hero-credit::before {
-      content: "";
-      width: 22px; height: 1px;
-      background: rgba(255, 255, 255, 0.45);
-    }
+    .hero-credit::before { content: ""; width: 22px; height: 1px; background: rgba(255,255,255,.45); }
 
     /* 공통 */
-    section { padding: 92px 0; }
-    .section-head {
-      max-width: 700px;
-      margin-bottom: 48px;
-    }
+    section { padding: 96px 0; }
+    .section-head { max-width: 720px; margin-bottom: 52px; }
     .section-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12.5px;
-      font-weight: 800;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
+      display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 800;
+      color: var(--accent); letter-spacing: 0.08em; margin-bottom: 14px;
     }
-    .section-tag::before {
-      content: "";
-      width: 26px; height: 1px;
-      background: var(--accent);
-    }
-    .section-head h2 {
-      font-size: clamp(25px, 3vw, 36px);
-      font-weight: 800;
-      letter-spacing: -0.032em;
-      line-height: 1.34;
-      margin-bottom: 14px;
-      color: var(--navy);
-    }
-    .section-head p {
-      font-size: 15.5px;
-      color: var(--muted);
-    }
+    .section-tag::before { content: ""; width: 26px; height: 1px; background: var(--accent); }
+    .section-head h2 { font-size: clamp(25px, 3vw, 36px); font-weight: 800; letter-spacing: -0.032em; line-height: 1.34; margin-bottom: 14px; color: var(--navy); }
+    .section-head p { font-size: 15.5px; color: var(--muted); }
 
-    /* 현장 사진 */
-    .gallery-head {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 28px;
-      flex-wrap: wrap;
-      margin-bottom: 34px;
+    /* 현장 이야기 - 단계 */
+    .stage {
+      display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center;
+      padding: 54px 0; border-top: 1px solid var(--line);
     }
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 30px;
+    .stage:first-of-type { border-top: none; padding-top: 0; }
+    .stage-body { order: 1; }
+    .stage-media { order: 2; }
+    .stage.flip .stage-body { order: 2; }
+    .stage.flip .stage-media { order: 1; }
+    .stage-num {
+      font-family: 'Noto Serif KR', serif; font-size: 15px; font-weight: 600; color: var(--accent);
+      letter-spacing: 0.12em; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
     }
-    .filter-btn {
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--muted);
-      border-radius: 999px;
-      padding: 9px 17px;
-      font-family: inherit;
-      font-size: 13.5px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all .18s ease;
-    }
-    .filter-btn:hover { border-color: #b9cfc9; color: var(--accent); }
-    .filter-btn.active {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: #fff;
-    }
+    .stage-num::after { content: ""; flex: 1; height: 1px; background: var(--line); max-width: 70px; }
+    .stage h3 { font-size: clamp(23px, 2.5vw, 30px); font-weight: 800; color: var(--navy); letter-spacing: -0.03em; line-height: 1.38; margin-bottom: 14px; }
+    .stage p { font-size: 15.5px; color: var(--muted); margin-bottom: 22px; }
+    .stage-list { list-style: none; display: grid; gap: 9px; font-size: 14.5px; color: #344054; }
+    .stage-list li { display: flex; gap: 10px; align-items: flex-start; }
+    .stage-list li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 9px; flex-shrink: 0; }
+    .stage-media { display: grid; grid-template-columns: 1.45fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; }
+    .stage-media figure { margin: 0; overflow: hidden; border-radius: 14px; background: #e6e9e6; }
+    .stage-media img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform .7s cubic-bezier(.2,.7,.3,1); }
+    .stage-media figure:hover img { transform: scale(1.04); }
+    .stage-media .main { grid-row: span 2; }
 
-    .masonry {
-      columns: 3;
-      column-gap: 18px;
+    /* 비교 */
+    .compare-band { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .compare-item { position: relative; margin: 0; border-radius: 18px; overflow: hidden; background: #e6e9e6; box-shadow: 0 10px 30px rgba(16,24,40,.07); }
+    .compare-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; cursor: zoom-in; }
+    .compare-label {
+      position: absolute; top: 14px; left: 14px; padding: 6px 13px; border-radius: 999px;
+      background: rgba(11,19,36,.8); color: #e7f4f1; font-size: 12px; font-weight: 700; backdrop-filter: blur(6px);
     }
-    figure.case {
-      break-inside: avoid;
-      margin: 0 0 18px;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: 0 6px 20px rgba(16, 24, 40, 0.05);
-      cursor: zoom-in;
-      transition: box-shadow .25s ease, transform .25s ease;
+    .compare-item.after .compare-label { background: rgba(15,118,110,.92); color: #fff; }
+    .compare-caption { margin-top: 22px; font-size: 13.5px; color: var(--subtle); line-height: 1.7; }
+
+    /* 공간별 */
+    .space-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px; }
+    .space-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px 28px 30px;
+      box-shadow: 0 3px 14px rgba(16,24,40,.04); transition: box-shadow .25s ease, transform .25s ease;
     }
-    figure.case:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-    figure.case.is-hidden { display: none; }
-    .case-img {
-      position: relative;
-      overflow: hidden;
-      background: #dfe3e0;
-    }
-    .case-img img {
-      width: 100%;
-      height: auto;
-      transition: transform .7s cubic-bezier(.2, .7, .3, 1);
-    }
-    figure.case:hover .case-img img { transform: scale(1.045); }
-    .case-chip {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: rgba(11, 19, 36, 0.78);
-      backdrop-filter: blur(6px);
-      color: #e7f4f1;
-      font-size: 11.5px;
-      font-weight: 700;
-    }
-    figcaption { padding: 16px 18px 18px; }
-    figcaption strong {
-      display: block;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-      margin-bottom: 4px;
-    }
-    figcaption span {
-      font-size: 13px;
-      color: var(--subtle);
-      line-height: 1.55;
-    }
+    .space-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .space-card h3 { font-size: 19px; font-weight: 800; color: var(--navy); letter-spacing: -0.025em; margin-bottom: 8px; }
+    .space-card > p { font-size: 14.5px; color: var(--muted); margin-bottom: 20px; min-height: 48px; }
+    .space-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .strip-item { margin: 0; }
+    .strip-step { display: block; font-size: 11.5px; font-weight: 800; color: var(--accent); letter-spacing: 0.02em; margin-bottom: 7px; }
+    .strip-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 10px; cursor: zoom-in; background: #e6e9e6; }
 
     /* 위탁 분야 */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
+    .alt-bg { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
     .service-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 3px 14px rgba(16, 24, 40, 0.04);
-      display: flex;
-      flex-direction: column;
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 3px 14px rgba(16,24,40,.04); display: flex; flex-direction: column;
       transition: box-shadow .25s ease, transform .25s ease;
     }
     .service-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-    .service-media {
-      position: relative;
-      aspect-ratio: 16 / 10;
-      overflow: hidden;
-    }
-    .service-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .7s cubic-bezier(.2, .7, .3, 1);
-    }
+    .service-media { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+    .service-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.3,1); }
     .service-card:hover .service-media img { transform: scale(1.05); }
-    .service-media::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(11, 19, 36, 0) 45%, rgba(11, 19, 36, 0.55) 100%);
-    }
     .service-body { padding: 26px 28px 28px; flex: 1; }
-    .service-body h3 {
-      font-size: 19px;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 10px;
-      letter-spacing: -0.025em;
-      line-height: 1.4;
-    }
-    .service-body p {
-      font-size: 14.5px;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-    .check-list {
-      list-style: none;
-      display: grid;
-      gap: 9px;
-      font-size: 14px;
-      color: #344054;
-    }
-    .check-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 9px;
-      line-height: 1.55;
-    }
-    .check-list li::before {
-      content: "✓";
-      color: var(--accent);
-      font-weight: 800;
-      flex-shrink: 0;
-    }
+    .service-body h3 { font-size: 19px; font-weight: 800; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.025em; line-height: 1.4; }
+    .service-body p { font-size: 14.5px; color: var(--muted); margin-bottom: 18px; }
+    .check-list { list-style: none; display: grid; gap: 9px; font-size: 14px; color: #344054; }
+    .check-list li { display: flex; align-items: flex-start; gap: 9px; line-height: 1.55; }
+    .check-list li::before { content: "✓"; color: var(--accent); font-weight: 800; flex-shrink: 0; }
 
     /* 운영 강점 */
-    .alt-bg {
-      background: #fff;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .pillar {
-      padding: 32px 30px;
-      border-radius: var(--radius);
-      background: var(--bg);
-      border: 1px solid var(--line);
-      position: relative;
-      overflow: hidden;
-    }
-    .pillar-num {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      margin-bottom: 16px;
-    }
-    .pillar h3 {
-      font-size: 18.5px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      color: var(--navy);
-      letter-spacing: -0.025em;
-      line-height: 1.42;
-    }
-    .pillar p {
-      font-size: 14.5px;
-      color: var(--muted);
-    }
+    .pillar { padding: 32px 30px; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); position: relative; overflow: hidden; }
+    .pillar-num { font-size: 12.5px; font-weight: 800; color: var(--accent); letter-spacing: 0.04em; margin-bottom: 16px; }
+    .pillar h3 { font-size: 18.5px; font-weight: 800; margin-bottom: 10px; color: var(--navy); letter-spacing: -0.025em; line-height: 1.42; }
+    .pillar p { font-size: 14.5px; color: var(--muted); }
     .pillar::after {
-      content: "";
-      position: absolute;
-      right: -40px;
-      bottom: -60px;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(15, 118, 110, 0.08), transparent 70%);
+      content: ""; position: absolute; right: -40px; bottom: -60px; width: 130px; height: 130px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(15,118,110,.08), transparent 70%);
     }
 
     /* 진행 절차 */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .step {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px 24px;
-    }
+    .steps { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+    .step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; }
     .step-badge {
-      display: inline-block;
-      padding: 4px 11px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      margin-bottom: 14px;
+      display: inline-block; padding: 4px 11px; border-radius: 999px; background: var(--accent-soft);
+      color: var(--accent); font-size: 11.5px; font-weight: 800; margin-bottom: 14px;
     }
-    .step h4 {
-      font-size: 16.5px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
-    .step p {
-      font-size: 13.8px;
-      color: var(--muted);
-    }
-
-    /* 사진과 원칙 */
-    .quote-band {
-      background: var(--navy);
-      color: #fff;
-      padding: 72px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .quote-band::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 82% 20%, rgba(20, 184, 166, 0.22), transparent 55%);
-    }
-    .quote-inner {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      align-items: center;
-    }
-    .quote-band h2 {
-      font-size: clamp(23px, 2.6vw, 31px);
-      line-height: 1.5;
-      letter-spacing: -0.03em;
-      font-weight: 600;
-    }
-    .quote-band h2 strong { font-weight: 800; color: #5eead4; }
-    .quote-band p {
-      font-size: 14.5px;
-      color: #c3ccd9;
-      margin-top: 14px;
-    }
-    .quote-photo {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      aspect-ratio: 4 / 3;
-    }
-    .quote-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .step h4 { font-size: 16.5px; font-weight: 800; margin-bottom: 8px; color: var(--navy); letter-spacing: -0.02em; }
+    .step p { font-size: 13.8px; color: var(--muted); }
 
     /* 문의 */
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      gap: 32px;
-      align-items: start;
-    }
-    .contact-info {
-      background: var(--navy);
-      color: #fff;
-      border-radius: 20px;
-      padding: 38px 34px;
-      position: relative;
-      overflow: hidden;
-    }
+    .contact-wrap { display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 32px; align-items: start; }
+    .contact-info { background: var(--navy); color: #fff; border-radius: 20px; padding: 38px 34px; position: relative; overflow: hidden; }
     .contact-info::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: -80px;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(20, 184, 166, 0.2), transparent 68%);
+      content: ""; position: absolute; right: -80px; top: -80px; width: 240px; height: 240px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(20,184,166,.2), transparent 68%);
     }
-    .contact-info h3 {
-      font-size: 23px;
-      font-weight: 800;
-      margin-bottom: 12px;
-      letter-spacing: -0.03em;
-      position: relative;
-    }
-    .contact-info p {
-      color: #c3ccd9;
-      font-size: 14.5px;
-      margin-bottom: 28px;
-      position: relative;
-    }
-    .info-rows {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 26px;
-      position: relative;
-    }
-    .info-row {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 12px;
-      padding: 14px 16px;
-    }
-    .info-row small {
-      display: block;
-      font-size: 11.5px;
-      color: #7dd3c7;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-    .info-row strong, .info-row a {
-      font-size: 15.5px;
-      font-weight: 700;
-      color: #fff;
-    }
+    .contact-info h3 { font-size: 23px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.03em; position: relative; }
+    .contact-info p { color: #c3ccd9; font-size: 14.5px; margin-bottom: 28px; position: relative; }
+    .info-rows { display: grid; gap: 12px; margin-bottom: 26px; position: relative; }
+    .info-row { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 14px 16px; }
+    .info-row small { display: block; font-size: 11.5px; color: #7dd3c7; font-weight: 700; margin-bottom: 3px; }
+    .info-row strong, .info-row a { font-size: 15.5px; font-weight: 700; color: #fff; }
     .info-row a:hover { color: #5eead4; }
     .contact-badge {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
-      font-size: 12.5px;
-      color: #a7b2c3;
-      line-height: 1.5;
+      position: relative; display: flex; align-items: center; gap: 10px; padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.14); font-size: 12.5px; color: #a7b2c3;
     }
     .contact-badge b { color: #fff; font-weight: 700; }
 
-    .form-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 38px 34px;
-      box-shadow: 0 10px 34px rgba(16, 24, 40, 0.06);
-    }
-    .form-card h3 {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: -0.03em;
-      margin-bottom: 6px;
-    }
-    .form-card .form-sub {
-      font-size: 13.5px;
-      color: var(--subtle);
-      margin-bottom: 24px;
-    }
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 16px;
-    }
+    .form-card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 38px 34px; box-shadow: 0 10px 34px rgba(16,24,40,.06); }
+    .form-card h3 { font-size: 20px; font-weight: 800; color: var(--navy); letter-spacing: -0.03em; margin-bottom: 6px; }
+    .form-card .form-sub { font-size: 13.5px; color: var(--subtle); margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
     .field { margin-bottom: 16px; }
     .field.full { grid-column: 1 / -1; }
-    label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
+    label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
     input, select, textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 10px;
-      border: 1px solid #d6d8db;
-      font-family: inherit;
-      font-size: 14.5px;
-      color: var(--ink);
-      background: #fff;
+      width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #d6d8db;
+      font-family: inherit; font-size: 14.5px; color: var(--ink); background: #fff;
       transition: border-color .15s ease, box-shadow .15s ease;
     }
     input::placeholder, textarea::placeholder { color: #9aa3ae; }
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.13);
-    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(15,118,110,.13); }
     textarea { min-height: 108px; resize: vertical; }
     .submit-btn {
-      width: 100%;
-      padding: 16px 20px;
-      border-radius: 12px;
-      background: var(--navy);
-      color: #fff;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 800;
-      border: none;
-      cursor: pointer;
+      width: 100%; padding: 16px 20px; border-radius: 12px; background: var(--navy); color: #fff;
+      font-family: inherit; font-size: 15px; font-weight: 800; border: none; cursor: pointer;
       transition: background .15s ease, transform .15s ease;
     }
     .submit-btn:hover { background: var(--accent); transform: translateY(-1px); }
-    .form-note {
-      margin-top: 12px;
-      font-size: 12.5px;
-      color: var(--subtle);
-      text-align: center;
-      line-height: 1.5;
-    }
+    .form-note { margin-top: 12px; font-size: 12.5px; color: var(--subtle); text-align: center; line-height: 1.5; }
     .toast {
-      display: none;
-      margin-top: 14px;
-      padding: 14px 16px;
-      border-radius: 10px;
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      color: #065f46;
-      font-size: 13.5px;
-      font-weight: 600;
+      display: none; margin-top: 14px; padding: 14px 16px; border-radius: 10px;
+      background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; font-size: 13.5px; font-weight: 600;
     }
 
     /* 각주 */
-    footer {
-      background: #0b1324;
-      color: #94a3b8;
-      padding: 46px 0 38px;
-      font-size: 13px;
-    }
+    footer { background: #0b1324; color: #94a3b8; padding: 46px 0 38px; font-size: 13px; }
     .footer-top {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 22px;
-      padding-bottom: 26px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 22px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px;
+      padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: 22px;
     }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      color: #fff;
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: -0.03em;
-    }
+    .footer-brand { display: flex; align-items: center; gap: 11px; color: #fff; font-weight: 800; font-size: 18px; letter-spacing: -0.03em; }
     .footer-brand .brand-badge { background: #14b8a6; color: #04231f; }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      font-size: 13px;
-      color: #a7b2c3;
-    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 22px; font-size: 13px; color: #a7b2c3; }
     .footer-links a:hover { color: #fff; }
-    .footer-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-      line-height: 1.7;
-    }
+    .footer-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; line-height: 1.7; }
     .footer-meta b { color: #cbd5e1; font-weight: 600; }
 
     /* 사진 크게 보기 */
     .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(6, 11, 21, 0.92);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 32px;
-      backdrop-filter: blur(6px);
+      position: fixed; inset: 0; z-index: 100; background: rgba(6,11,21,.93);
+      display: none; align-items: center; justify-content: center; padding: 32px; backdrop-filter: blur(6px);
     }
     .lightbox.open { display: flex; }
     .lightbox figure { max-width: min(1080px, 94vw); text-align: center; }
-    .lightbox img {
-      max-height: 78vh;
-      width: auto;
-      margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
-    }
-    .lightbox figcaption {
-      color: #cbd5e1;
-      font-size: 13.5px;
-      margin-top: 16px;
-      padding: 0;
-    }
+    .lightbox img { max-height: 78vh; width: auto; margin: 0 auto; border-radius: 12px; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+    .lightbox figcaption { color: #cbd5e1; font-size: 13.5px; margin-top: 16px; padding: 0; }
     .lightbox-close {
-      position: absolute;
-      top: 22px;
-      right: 26px;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      line-height: 1;
+      position: absolute; top: 22px; right: 26px; width: 42px; height: 42px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.08); color: #fff;
+      font-size: 18px; cursor: pointer; line-height: 1;
     }
-    .lightbox-close:hover { background: rgba(255, 255, 255, 0.18); }
+    .lightbox-close:hover { background: rgba(255,255,255,.18); }
 
     /* 나타나기 효과 */
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.in { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
@@ -833,25 +302,33 @@
     }
 
     @media (max-width: 1024px) {
-      .masonry { columns: 2; }
-      .hero-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+      .stage { grid-template-columns: 1fr; gap: 30px; padding: 44px 0; }
+      .stage .stage-body, .stage.flip .stage-body { order: 1; }
+      .stage .stage-media, .stage.flip .stage-media { order: 2; }
+      .space-grid { grid-template-columns: 1fr; }
+      .hero-facts { grid-template-columns: repeat(2, minmax(0,1fr)); row-gap: 18px; }
       .hero-fact:nth-child(3) { padding-left: 0; border-left: none; }
     }
     @media (max-width: 900px) {
-      .grid-3, .steps, .contact-wrap, .quote-inner { grid-template-columns: 1fr; }
+      .grid-3, .steps, .contact-wrap { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .form-grid { grid-template-columns: 1fr; }
       .hero-inner { padding: 84px 24px 78px; }
       .hero-credit { display: none; }
       section { padding: 68px 0; }
-      .quote-photo { max-width: 460px; }
+      .compare-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
-      .masonry { columns: 1; }
       .hero h1 { font-size: 29px; }
       .hero-facts { grid-template-columns: 1fr; }
-      .hero-fact + .hero-fact { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
+      .hero-fact + .hero-fact { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,.1); padding-top: 14px; }
       .contact-info, .form-card { padding: 28px 22px; }
+      .space-card { padding: 22px 20px 24px; }
+      .space-card > p { min-height: 0; }
+      .stage-media { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .stage-media .main { grid-column: 1 / -1; grid-row: auto; }
+      .stage-media .main img { aspect-ratio: 4/3; }
+      .stage-media figure:not(.main) img { aspect-ratio: 1/1; }
     }
   </style>
 </head>
@@ -864,9 +341,9 @@
         <span>청소예술가<small>정기 위탁 청소</small></span>
       </a>
       <nav class="nav-links">
-        <a href="#cases">현장 사진</a>
+        <a href="#story">현장 이야기</a>
+        <a href="#spaces">공간별 작업</a>
         <a href="#services">위탁 분야</a>
-        <a href="#strengths">운영 강점</a>
         <a href="#process">진행 절차</a>
         <a href="#contact" class="nav-cta">무료 방문 실측 · 견적 문의</a>
       </nav>
@@ -913,134 +390,195 @@
     <div class="hero-credit">실제 작업 현장 · 레지던스 거실 청소</div>
   </section>
 
-  <section id="cases">
+  <section id="story">
     <div class="container">
-      <div class="gallery-head">
-        <div class="section-head">
-          <span class="section-tag">현장 사진</span>
-          <h2>말보다 사진으로 보여드립니다</h2>
-          <p>호텔·레지던스, 공유오피스·사옥, 병의원 현장에서 청소예술가가 직접 작업한 장면입니다. 같은 공간을 매일 같은 기준으로 관리하는 것이 저희 방식입니다.</p>
+      <div class="section-head">
+        <span class="section-tag">현장 이야기</span>
+        <h2>한 현장이 깨끗해지는 순서</h2>
+        <p>
+          문을 열고 들어가 오염을 살피는 일에서 시작해, 마지막 점검까지.
+          청소예술가가 실제 현장에서 남긴 사진을 작업 순서대로 담았습니다.
+          사진을 누르면 크게 볼 수 있습니다.
+        </p>
+      </div>
+
+      <article class="stage">
+        <div class="stage-body">
+          <div class="stage-num">첫 번째 · 진단</div>
+          <h3>도착하면 먼저 오염을 나눠 봅니다</h3>
+          <p>
+            눈에 보이는 먼지보다 먼저 확인하는 것이 있습니다. 바닥 재질과 카펫 섬유 상태, 천장형 에어컨 필터,
+            석재와 유리에 붙은 물때입니다. 무엇이 문제인지에 따라 약제와 장비, 작업 순서가 달라집니다.
+          </p>
+          <ul class="stage-list">
+            <li>바닥 재질과 카펫 섬유 상태 확인</li>
+            <li>천장형 에어컨 필터와 송풍구 분해 점검</li>
+            <li>물때·석재 오염 범위 기록 후 작업 순서 결정</li>
+          </ul>
         </div>
+        <div class="stage-media">
+          <figure class="main"><img src="assets/stage-diag-ac.jpg" alt="먼지가 가득 찬 에어컨 필터를 장갑 낀 손으로 들어 보이는 모습" width="1200" height="1600" loading="lazy" /></figure>
+          <figure><img src="assets/stage-diag-carpet.jpg" alt="오염이 쌓인 계단 카펫 위에 세척 장비를 올려 둔 모습" width="1200" height="900" loading="lazy" /></figure>
+          <figure><img src="assets/stage-diag-office.jpg" alt="공사가 끝난 사무실 바닥에 남은 먼지와 자재 부스러기" width="1200" height="1600" loading="lazy" /></figure>
+        </div>
+      </article>
+
+      <article class="stage flip">
+        <div class="stage-body">
+          <div class="stage-num">두 번째 · 정밀 작업</div>
+          <h3>같은 바닥이라도 다르게 닦습니다</h3>
+          <p>
+            파케이와 원목은 물을 적게 쓰고 바로 건조합니다. 타일과 석재는 장비로 오염을 띄워 빼고,
+            카펫은 약제를 넣은 뒤 섬유 안쪽까지 진공으로 뽑아냅니다. 에어컨은 필터와 송풍구를 분해해
+            한 조각씩 씻습니다.
+          </p>
+          <ul class="stage-list">
+            <li>파케이·원목 바닥은 물세척 후 즉시 건조</li>
+            <li>타일·석재·카펫은 장비로 오염을 띄워 추출</li>
+            <li>천장형 에어컨은 필터·송풍구 분해 세척</li>
+          </ul>
+        </div>
+        <div class="stage-media">
+          <figure class="main"><img src="assets/stage-work-parquet.jpg" alt="레지던스 거실의 파케이 바닥을 물걸레로 닦는 작업자" width="1200" height="900" loading="lazy" /></figure>
+          <figure><img src="assets/stage-work-clinic.jpg" alt="병의원 바닥을 세척 장비로 닦는 모습" width="1200" height="1600" loading="lazy" /></figure>
+          <figure><img src="assets/stage-work-carpet.jpg" alt="계단 카펫을 장비로 세척하는 작업자" width="1200" height="900" loading="lazy" /></figure>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-body">
+          <div class="stage-num">세 번째 · 마감</div>
+          <h3>장비를 빼낸 뒤 불을 켜고 다시 봅니다</h3>
+          <p>
+            작업이 끝났다고 바로 나오지 않습니다. 조명을 켜고 유리와 금속의 얼룩, 문턱과 모서리,
+            환기구 주변을 다시 확인합니다. 확인한 상태는 사진으로 남겨 다음 작업의 기준으로 삼습니다.
+          </p>
+          <ul class="stage-list">
+            <li>조명을 켠 상태로 유리·금속 얼룩 재점검</li>
+            <li>작업 전후 사진 기록과 결과 보고</li>
+            <li>현장 점검표로 다음 작업에 그대로 인계</li>
+          </ul>
+        </div>
+        <div class="stage-media">
+          <figure class="main"><img src="assets/stage-done-living.jpg" alt="청소를 마친 레지던스 거실의 모습" width="1200" height="900" loading="lazy" /></figure>
+          <figure><img src="assets/stage-done-cassette.jpg" alt="세척과 조립을 마친 천장형 에어컨 실내기" width="1200" height="1600" loading="lazy" /></figure>
+          <figure><img src="assets/stage-done-corridor.jpg" alt="청소를 마친 병의원 복도 바닥" width="1200" height="1600" loading="lazy" /></figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="compare-band" id="compare">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">작업 전과 후</span>
+        <h2>같은 계단, 같은 카펫입니다</h2>
+        <p>
+          계단 카펫은 오염이 섬유 안쪽에 남아 눈으로만 봐서는 알기 어렵습니다.
+          약제를 넣고 장비로 뽑아낸 뒤에는 카펫 본래의 색이 돌아옵니다.
+        </p>
       </div>
 
-      <div class="filters" role="group" aria-label="현장 사진 분류">
-        <button type="button" class="filter-btn active" data-filter="all">전체</button>
-        <button type="button" class="filter-btn" data-filter="stay">호텔 · 레지던스</button>
-        <button type="button" class="filter-btn" data-filter="office">공유오피스 · 사옥</button>
-        <button type="button" class="filter-btn" data-filter="clinic">병의원</button>
-        <button type="button" class="filter-btn" data-filter="special">카펫 · 계단</button>
+      <div class="compare-grid">
+        <figure class="compare-item before">
+          <span class="compare-label">작업 전</span>
+          <img src="assets/compare-before.jpg" alt="세척 전 계단 카펫의 모습" width="1400" height="1050" loading="lazy" />
+        </figure>
+        <figure class="compare-item after">
+          <span class="compare-label">작업 후</span>
+          <img src="assets/compare-after.jpg" alt="세척을 마친 구간이 밝게 드러난 계단 카펫" width="1400" height="1050" loading="lazy" />
+        </figure>
+      </div>
+      <p class="compare-caption">
+        오른쪽 사진은 세척이 끝난 구간과 아직 남은 구간이 한 화면에 담겨 있습니다. 같은 카펫에서도 색이 이렇게 달라집니다.
+      </p>
+    </div>
+  </section>
+
+  <section id="spaces">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">공간별 작업</span>
+        <h2>공간마다 다른 세 단계</h2>
+        <p>같은 청소라도 호텔 객실과 사무실, 병의원은 순서가 다릅니다. 공간별로 진단과 작업, 마감이 어떻게 이어지는지 정리했습니다.</p>
       </div>
 
-      <div class="masonry" id="caseGrid">
-        <figure class="case" data-cat="stay">
-          <div class="case-img">
-            <img src="assets/case-residence-study.jpg" alt="레지던스 서재에서 가구 주변과 바닥을 청소하는 작업자" width="1200" height="1600" loading="lazy" />
-            <span class="case-chip">레지던스</span>
+      <div class="space-grid">
+        <article class="space-card">
+          <h3>호텔 · 레지던스</h3>
+          <p>입주와 투숙 일정에 맞춰 창호와 테라스, 바닥과 욕실을 순서대로 마감합니다.</p>
+          <div class="space-strip">
+            <figure class="strip-item">
+              <span class="strip-step">진단</span>
+              <img src="assets/space-res-terrace.jpg" alt="테라스와 거실 창호 상태를 확인하는 모습" width="1200" height="900" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">작업</span>
+              <img src="assets/space-res-study.jpg" alt="레지던스 서재의 가구 주변과 바닥을 청소하는 작업자" width="1200" height="1600" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">마감</span>
+              <img src="assets/stage-done-living.jpg" alt="청소를 마친 레지던스 거실" width="1200" height="900" loading="lazy" />
+            </figure>
           </div>
-          <figcaption>
-            <strong>레지던스 서재 · 가구 주변 정밀 청소</strong>
-            <span>파케이 바닥과 가구 사이에 쌓인 먼지까지 손이 닿는 곳마다 닦습니다.</span>
-          </figcaption>
-        </figure>
+        </article>
 
-        <figure class="case" data-cat="office">
-          <div class="case-img">
-            <img src="assets/case-office-meeting.jpg" alt="공유오피스 유리 회의실을 청소해 정리한 모습" width="1200" height="1600" loading="lazy" />
-            <span class="case-chip">공유오피스</span>
+        <article class="space-card">
+          <h3>공유오피스 · 사옥</h3>
+          <p>공사 직후의 먼지와 자재 부스러기부터 회의실 유리, 천장형 에어컨까지 한 번에 정리합니다.</p>
+          <div class="space-strip">
+            <figure class="strip-item">
+              <span class="strip-step">진단</span>
+              <img src="assets/stage-diag-office.jpg" alt="공사 직후 사무실 바닥의 먼지와 부스러기" width="1200" height="1600" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">작업</span>
+              <img src="assets/stage-work-ceiling.jpg" alt="사무실 천장형 에어컨을 사다리에서 세척하는 작업자" width="1200" height="1600" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">마감</span>
+              <img src="assets/stage-done-meeting.jpg" alt="정리를 마친 공유오피스 회의실" width="1200" height="1600" loading="lazy" />
+            </figure>
           </div>
-          <figcaption>
-            <strong>공유오피스 회의실 · 유리벽 마무리</strong>
-            <span>유리벽의 지문과 얼룩, 탁자와 의자 배열을 다음 예약 전에 정리합니다.</span>
-          </figcaption>
-        </figure>
+        </article>
 
-        <figure class="case" data-cat="stay">
-          <div class="case-img">
-            <img src="assets/case-residence-living.jpg" alt="입주 전 레지던스 거실에서 소파 주변을 청소하는 작업자" width="1200" height="900" loading="lazy" />
-            <span class="case-chip">레지던스</span>
+        <article class="space-card">
+          <h3>병의원 · 전문직 사무실</h3>
+          <p>진료 시작 전 시간을 이용해 바닥과 모서리, 위생 구역을 장비로 깊게 씻습니다.</p>
+          <div class="space-strip">
+            <figure class="strip-item">
+              <span class="strip-step">진단</span>
+              <img src="assets/stage-work-clinic.jpg" alt="병의원 바닥에 장비를 대고 오염을 확인하는 모습" width="1200" height="1600" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">작업</span>
+              <img src="assets/space-clinic-detail.jpg" alt="병의원 바닥 모서리까지 장비로 씻는 작업" width="1200" height="1600" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">마감</span>
+              <img src="assets/stage-done-corridor.jpg" alt="청소를 마친 병의원 복도" width="1200" height="1600" loading="lazy" />
+            </figure>
           </div>
-          <figcaption>
-            <strong>입주 전 레지던스 거실 청소</strong>
-            <span>창호와 채광, 소파 선까지 눈에 보이는 그대로 정돈합니다.</span>
-          </figcaption>
-        </figure>
+        </article>
 
-        <figure class="case" data-cat="office">
-          <div class="case-img">
-            <img src="assets/case-office-ceiling.jpg" alt="사무실 천장형 에어컨을 사다리에서 분해해 세척하는 작업자" width="1200" height="1600" loading="lazy" />
-            <span class="case-chip">사옥 · 사무실</span>
+        <article class="space-card">
+          <h3>사옥 외부 · 계단 · 카펫</h3>
+          <p>출입구 석재와 계단 카펫처럼 사람이 가장 먼저 딛는 곳을 먼저 손봅니다.</p>
+          <div class="space-strip">
+            <figure class="strip-item">
+              <span class="strip-step">진단</span>
+              <img src="assets/stage-diag-carpet.jpg" alt="오염이 쌓인 계단 카펫" width="1200" height="900" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">작업</span>
+              <img src="assets/space-office-facade.jpg" alt="사옥 석재 벽면과 출입구를 물로 씻는 작업자" width="1200" height="900" loading="lazy" />
+            </figure>
+            <figure class="strip-item">
+              <span class="strip-step">마감</span>
+              <img src="assets/compare-after.jpg" alt="세척을 마친 구간이 밝게 드러난 계단 카펫" width="1400" height="1050" loading="lazy" />
+            </figure>
           </div>
-          <figcaption>
-            <strong>사무실 천장형 에어컨 분해 세척</strong>
-            <span>필터와 송풍구를 분해해 씻고, 냄새와 먼지의 원인까지 함께 정리합니다.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="case" data-cat="stay">
-          <div class="case-img">
-            <img src="assets/case-residence-villa.jpg" alt="단독주택 테라스와 거실 창호를 물로 씻는 작업자" width="1200" height="900" loading="lazy" />
-            <span class="case-chip">레지던스 · 주택</span>
-          </div>
-          <figcaption>
-            <strong>주택 테라스 · 창호 물세척</strong>
-            <span>유리와 창틀, 테라스 바닥까지 물로 씻어 마무리합니다.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="case" data-cat="clinic">
-          <div class="case-img">
-            <img src="assets/case-clinic-floor.jpg" alt="병의원 내부 바닥을 세척 장비로 닦는 모습" width="1200" height="1600" loading="lazy" />
-            <span class="case-chip">병의원</span>
-          </div>
-          <figcaption>
-            <strong>병의원 진료 공간 · 바닥 기계 세척</strong>
-            <span>진료 시작 전, 환자가 걷는 바닥을 장비로 깊이 씻습니다.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="case" data-cat="office">
-          <div class="case-img">
-            <img src="assets/case-facade-stone.jpg" alt="사옥 석재 벽면과 출입구를 물로 씻는 작업자" width="1200" height="900" loading="lazy" />
-            <span class="case-chip">사옥</span>
-          </div>
-          <figcaption>
-            <strong>사옥 석재 벽면 · 출입구 물세척</strong>
-            <span>출입구와 로비의 석재, 눈에 띄는 오염부터 잡습니다.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="case" data-cat="office">
-          <div class="case-img">
-            <img src="assets/case-office-lounge.jpg" alt="공유오피스 라운지의 유리벽과 집기를 청소하는 모습" width="1200" height="1600" loading="lazy" />
-            <span class="case-chip">공유오피스</span>
-          </div>
-          <figcaption>
-            <strong>공유오피스 라운지 · 유리벽 관리</strong>
-            <span>입주사가 하루 종일 마주하는 유리벽과 공용 집기를 관리합니다.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="case" data-cat="clinic">
-          <div class="case-img">
-            <img src="assets/case-clinic-detail.jpg" alt="병의원 바닥 모서리까지 장비로 씻는 작업" width="1200" height="1600" loading="lazy" />
-            <span class="case-chip">병의원</span>
-          </div>
-          <figcaption>
-            <strong>병의원 바닥 · 모서리 마무리</strong>
-            <span>벽과 맞닿은 모서리처럼 눈에 덜 띄는 곳을 따로 챙깁니다.</span>
-          </figcaption>
-        </figure>
-
-        <figure class="case" data-cat="special">
-          <div class="case-img">
-            <img src="assets/case-stair-carpet.jpg" alt="건물 계단 카펫을 장비로 깊이 세척하는 작업자" width="1200" height="900" loading="lazy" />
-            <span class="case-chip">카펫 · 계단</span>
-          </div>
-          <figcaption>
-            <strong>계단 카펫 · 깊은 세척</strong>
-            <span>사람이 자주 딛는 계단 카펫을 장비로 씻어 오염과 냄새를 줄입니다.</span>
-          </figcaption>
-        </figure>
+        </article>
       </div>
     </div>
   </section>
@@ -1056,7 +594,7 @@
       <div class="grid-3">
         <article class="service-card">
           <div class="service-media">
-            <img src="assets/case-residence-living.jpg" alt="레지던스 거실 청소" width="1200" height="900" loading="lazy" />
+            <img src="assets/stage-done-living.jpg" alt="레지던스 거실 청소" width="1200" height="900" loading="lazy" />
           </div>
           <div class="service-body">
             <h3>호텔 · 레지던스 · 숙박시설 위탁</h3>
@@ -1072,7 +610,7 @@
 
         <article class="service-card">
           <div class="service-media">
-            <img src="assets/case-office-lounge.jpg" alt="공유오피스 라운지 유리벽 청소" width="1200" height="1600" loading="lazy" />
+            <img src="assets/stage-done-meeting.jpg" alt="공유오피스 회의실 청소" width="1200" height="1600" loading="lazy" />
           </div>
           <div class="service-body">
             <h3>공유오피스 · 사옥 · 일반 사무실</h3>
@@ -1088,7 +626,7 @@
 
         <article class="service-card">
           <div class="service-media">
-            <img src="assets/case-clinic-floor.jpg" alt="병의원 바닥 세척" width="1200" height="1600" loading="lazy" />
+            <img src="assets/stage-work-clinic.jpg" alt="병의원 바닥 세척" width="1200" height="1600" loading="lazy" />
           </div>
           <div class="service-body">
             <h3>병의원 · 법무 · 회계 · 세무법인</h3>
@@ -1128,18 +666,6 @@
           <h3>노무와 정산, 세무 행정을 한 번에</h3>
           <p>근로계약, 일일 근무 명단, 인건비 지급, 월말 전자세금계산서 발행까지 본사의 행정 부담을 덜어드립니다.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote-band">
-    <div class="container quote-inner">
-      <div>
-        <h2 class="serif">“청소의 결과는<br /><strong>사진 한 장으로 확인됩니다.</strong>”</h2>
-        <p>작업 전후 상태를 사진으로 남기고, 점검표로 같은 기준을 되풀이합니다. 눈에 잘 띄지 않는 곳까지 확인할 수 있도록 저희는 매일의 현장을 기록합니다.</p>
-      </div>
-      <div class="quote-photo">
-        <img src="assets/case-residence-parquet.jpg" alt="레지던스 거실 파케이 바닥을 물걸레로 닦는 작업자" width="1200" height="900" loading="lazy" />
       </div>
     </div>
   </section>
@@ -1267,9 +793,9 @@
           <span>청소예술가</span>
         </div>
         <div class="footer-links">
-          <a href="#cases">현장 사진</a>
+          <a href="#story">현장 이야기</a>
+          <a href="#spaces">공간별 작업</a>
           <a href="#services">위탁 분야</a>
-          <a href="#strengths">운영 강점</a>
           <a href="#process">진행 절차</a>
           <a href="#contact">견적 문의</a>
         </div>
@@ -1290,22 +816,6 @@
   </div>
 
   <script>
-    // 현장 사진 분류
-    (function () {
-      var buttons = document.querySelectorAll('.filter-btn');
-      var cases = document.querySelectorAll('#caseGrid .case');
-      buttons.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          buttons.forEach(function (b) { b.classList.remove('active'); });
-          btn.classList.add('active');
-          var f = btn.getAttribute('data-filter');
-          cases.forEach(function (c) {
-            c.classList.toggle('is-hidden', f !== 'all' && c.getAttribute('data-cat') !== f);
-          });
-        });
-      });
-    })();
-
     // 사진 크게 보기
     (function () {
       var box = document.getElementById('lightbox');
@@ -1313,13 +823,14 @@
       var cap = document.getElementById('lightboxCaption');
       var closeBtn = document.getElementById('lightboxClose');
 
-      document.querySelectorAll('#caseGrid .case').forEach(function (fig) {
-        fig.addEventListener('click', function () {
-          var src = fig.querySelector('img');
-          var title = fig.querySelector('figcaption strong');
-          img.src = src.getAttribute('src');
-          img.alt = src.getAttribute('alt') || '';
-          cap.textContent = title ? title.textContent : '';
+      document.querySelectorAll('.stage-media img, .space-strip img, .compare-item img').forEach(function (el) {
+        el.addEventListener('click', function () {
+          img.src = el.getAttribute('src');
+          img.alt = el.getAttribute('alt') || '';
+          var fig = el.closest('figure');
+          var label = fig ? fig.querySelector('.compare-label, .strip-step') : null;
+          var text = el.getAttribute('alt') || '';
+          cap.textContent = label ? label.textContent + ' · ' + text : text;
           box.classList.add('open');
           box.setAttribute('aria-hidden', 'false');
           document.body.style.overflow = 'hidden';
@@ -1340,7 +851,7 @@
     // 스크롤에 따른 나타나기
     (function () {
       if (!('IntersectionObserver' in window)) return;
-      var targets = document.querySelectorAll('.section-head, .case, .service-card, .pillar, .step, .quote-inner, .contact-wrap > *');
+      var targets = document.querySelectorAll('.section-head, .stage, .compare-item, .space-card, .service-card, .pillar, .step, .contact-wrap > *');
       targets.forEach(function (el) { el.classList.add('reveal'); });
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -1349,7 +860,7 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
       targets.forEach(function (el) { io.observe(el); });
     })();
 
