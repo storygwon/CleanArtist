@@ -146,23 +146,11 @@
     .stage-list { list-style: none; display: grid; gap: 9px; font-size: 14.5px; color: #344054; }
     .stage-list li { display: flex; gap: 10px; align-items: flex-start; }
     .stage-list li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 9px; flex-shrink: 0; }
-    .stage-media { display: grid; grid-template-columns: 1.45fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; }
+    .stage-media { display: grid; grid-template-columns: 1.45fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; height: 540px; }
     .stage-media figure { margin: 0; overflow: hidden; border-radius: 14px; background: #e6e9e6; }
     .stage-media img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform .7s cubic-bezier(.2,.7,.3,1); }
     .stage-media figure:hover img { transform: scale(1.04); }
     .stage-media .main { grid-row: span 2; }
-
-    /* 비교 */
-    .compare-band { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .compare-item { position: relative; margin: 0; border-radius: 18px; overflow: hidden; background: #e6e9e6; box-shadow: 0 10px 30px rgba(16,24,40,.07); }
-    .compare-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; cursor: zoom-in; }
-    .compare-label {
-      position: absolute; top: 14px; left: 14px; padding: 6px 13px; border-radius: 999px;
-      background: rgba(11,19,36,.8); color: #e7f4f1; font-size: 12px; font-weight: 700; backdrop-filter: blur(6px);
-    }
-    .compare-item.after .compare-label { background: rgba(15,118,110,.92); color: #fff; }
-    .compare-caption { margin-top: 22px; font-size: 13.5px; color: var(--subtle); line-height: 1.7; }
 
     /* 공간별 */
     .space-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px; }
@@ -316,7 +304,6 @@
       .hero-inner { padding: 84px 24px 78px; }
       .hero-credit { display: none; }
       section { padding: 68px 0; }
-      .compare-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .hero h1 { font-size: 29px; }
@@ -325,7 +312,7 @@
       .contact-info, .form-card { padding: 28px 22px; }
       .space-card { padding: 22px 20px 24px; }
       .space-card > p { min-height: 0; }
-      .stage-media { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .stage-media { grid-template-columns: 1fr 1fr; grid-template-rows: auto; height: auto; }
       .stage-media .main { grid-column: 1 / -1; grid-row: auto; }
       .stage-media .main img { aspect-ratio: 4/3; }
       .stage-media figure:not(.main) img { aspect-ratio: 1/1; }
@@ -468,33 +455,6 @@
     </div>
   </section>
 
-  <section class="compare-band" id="compare">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">작업 전과 후</span>
-        <h2>같은 계단, 같은 카펫입니다</h2>
-        <p>
-          계단 카펫은 오염이 섬유 안쪽에 남아 눈으로만 봐서는 알기 어렵습니다.
-          약제를 넣고 장비로 뽑아낸 뒤에는 카펫 본래의 색이 돌아옵니다.
-        </p>
-      </div>
-
-      <div class="compare-grid">
-        <figure class="compare-item before">
-          <span class="compare-label">작업 전</span>
-          <img src="assets/compare-before.jpg" alt="세척 전 계단 카펫의 모습" width="1400" height="1050" loading="lazy" />
-        </figure>
-        <figure class="compare-item after">
-          <span class="compare-label">작업 후</span>
-          <img src="assets/compare-after.jpg" alt="세척을 마친 구간이 밝게 드러난 계단 카펫" width="1400" height="1050" loading="lazy" />
-        </figure>
-      </div>
-      <p class="compare-caption">
-        오른쪽 사진은 세척이 끝난 구간과 아직 남은 구간이 한 화면에 담겨 있습니다. 같은 카펫에서도 색이 이렇게 달라집니다.
-      </p>
-    </div>
-  </section>
-
   <section id="spaces">
     <div class="container">
       <div class="section-head">
@@ -562,8 +522,8 @@
         </article>
 
         <article class="space-card">
-          <h3>사옥 외부 · 계단 · 카펫</h3>
-          <p>출입구 석재와 계단 카펫처럼 사람이 가장 먼저 딛는 곳을 먼저 손봅니다.</p>
+          <h3>계단 · 카펫</h3>
+          <p>사람이 하루에도 수십 번 딛는 계단 카펫은 섬유 안쪽까지 약제를 넣고 뽑아냅니다.</p>
           <div class="space-strip">
             <figure class="strip-item">
               <span class="strip-step">진단</span>
@@ -571,11 +531,11 @@
             </figure>
             <figure class="strip-item">
               <span class="strip-step">작업</span>
-              <img src="assets/space-office-facade.jpg" alt="사옥 석재 벽면과 출입구를 물로 씻는 작업자" width="1200" height="900" loading="lazy" />
+              <img src="assets/stage-work-carpet.jpg" alt="계단 카펫을 장비로 세척하는 작업자" width="1200" height="900" loading="lazy" />
             </figure>
             <figure class="strip-item">
               <span class="strip-step">마감</span>
-              <img src="assets/compare-after.jpg" alt="세척을 마친 구간이 밝게 드러난 계단 카펫" width="1400" height="1050" loading="lazy" />
+              <img src="assets/stage-carpet-after.jpg" alt="세척을 마친 구간이 밝게 드러난 계단 카펫" width="1600" height="900" loading="lazy" />
             </figure>
           </div>
         </article>
@@ -610,7 +570,7 @@
 
         <article class="service-card">
           <div class="service-media">
-            <img src="assets/stage-done-meeting.jpg" alt="공유오피스 회의실 청소" width="1200" height="1600" loading="lazy" />
+            <img src="assets/space-office-facade.jpg" alt="사옥 석재 벽면과 출입구 물세척" width="1200" height="900" loading="lazy" />
           </div>
           <div class="service-body">
             <h3>공유오피스 · 사옥 · 일반 사무실</h3>
@@ -823,12 +783,12 @@
       var cap = document.getElementById('lightboxCaption');
       var closeBtn = document.getElementById('lightboxClose');
 
-      document.querySelectorAll('.stage-media img, .space-strip img, .compare-item img').forEach(function (el) {
+      document.querySelectorAll('.stage-media img, .space-strip img').forEach(function (el) {
         el.addEventListener('click', function () {
           img.src = el.getAttribute('src');
           img.alt = el.getAttribute('alt') || '';
           var fig = el.closest('figure');
-          var label = fig ? fig.querySelector('.compare-label, .strip-step') : null;
+          var label = fig ? fig.querySelector('.strip-step') : null;
           var text = el.getAttribute('alt') || '';
           cap.textContent = label ? label.textContent + ' · ' + text : text;
           box.classList.add('open');
@@ -851,7 +811,7 @@
     // 스크롤에 따른 나타나기
     (function () {
       if (!('IntersectionObserver' in window)) return;
-      var targets = document.querySelectorAll('.section-head, .stage, .compare-item, .space-card, .service-card, .pillar, .step, .contact-wrap > *');
+      var targets = document.querySelectorAll('.section-head, .stage, .space-card, .service-card, .pillar, .step, .contact-wrap > *');
       targets.forEach(function (el) { el.classList.add('reveal'); });
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
