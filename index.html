@@ -128,11 +128,11 @@
 
     /* 현장 이야기 - 단계 */
     .stage {
-      display: grid; grid-template-columns: 0.84fr 1.16fr; gap: 46px; align-items: center;
+      display: grid; grid-template-columns: 0.84fr 1.16fr; gap: 46px; align-items: start;
       padding: 54px 0; border-top: 1px solid var(--line);
     }
     .stage:first-of-type { border-top: none; padding-top: 0; }
-    .stage-body { order: 1; }
+    .stage-body { order: 1; padding-top: 14px; }
     .stage-media { order: 2; }
     .stage.flip .stage-body { order: 2; }
     .stage.flip .stage-media { order: 1; }
