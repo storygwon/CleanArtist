@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>청소예술가 | 호텔·레지던스 · 공유오피스 위탁관리 전문 파트너</title>
+  <meta name="description" content="서울 강남·서초 중심 호텔, 레지던스, 공유오피스 위탁 청소 및 공간 컨디션 관리 전문 기업 청소예술가. 상주·순회 운영부터 인력 대체, 세금계산서 정산까지 원스톱으로 책임집니다." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --line: #e2e8f0;
+      --navy: #0b1324;
+      --navy-soft: #16223d;
+      --accent: #0f766e;
+      --accent-light: #ccfbf1;
+      --gold: #b45309;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+    .brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: #fff !important;
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .nav-cta:hover { background: var(--navy-soft); transform: translateY(-1px); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0b1324 0%, #152544 65%, #11343a 100%);
+      color: #fff;
+      padding: 88px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -140px;
+      top: -140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.22), transparent 68%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 13px;
+      font-weight: 600;
+      color: #99f6e4;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 4.2vw, 48px);
+      line-height: 1.22;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 17px;
+      color: #cbd5e1;
+      max-width: 580px;
+      margin-bottom: 32px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-primary {
+      padding: 15px 26px;
+      border-radius: 12px;
+      background: #14b8a6;
+      color: #042f2e;
+      font-weight: 800;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .btn-primary:hover { background: #2dd4bf; transform: translateY(-1px); }
+    .btn-secondary {
+      padding: 15px 24px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.14); }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-card h3 {
+      font-size: 15px;
+      color: #99f6e4;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .stat-list {
+      display: grid;
+      gap: 16px;
+    }
+    .stat-item {
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .stat-item strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .stat-item span {
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-head {
+      max-width: 680px;
+      margin-bottom: 44px;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-head h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.28;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+    .section-head p {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    /* Cards Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+    }
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: #f0fdfa;
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      border: 1px solid #ccfbf1;
+    }
+    .card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .card p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 14.5px;
+      color: #334155;
+    }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .check-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Why Us */
+    .alt-bg { background: #ffffff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .pillar {
+      padding: 26px;
+      border-radius: var(--radius);
+      background: var(--bg);
+      border: 1px solid var(--line);
+    }
+    .pillar-num {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .pillar h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+    .pillar p {
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+
+    /* Process */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .step-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .step h4 {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+    .step p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Contact Section */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .contact-info {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 36px;
+    }
+    .contact-info h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .contact-info p {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+    .info-rows {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .info-row {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .info-row small {
+      display: block;
+      font-size: 12px;
+      color: #99f6e4;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .info-row strong, .info-row a {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .field { margin-bottom: 16px; }
+    .field.full { grid-column: 1 / -1; }
+    label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-family: inherit;
+      font-size: 14.5px;
+      color: var(--ink);
+      background: #fff;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    .submit-btn {
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 15.5px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: background .15s ease;
+    }
+    .submit-btn:hover { background: var(--navy-soft); }
+    .form-note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--subtle);
+      text-align: center;
+    }
+    .toast {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #0b1324;
+      color: #94a3b8;
+      padding: 36px 0;
+      font-size: 13.5px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid-2, .grid-3, .steps, .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-badge">청</span>
+        <span>청소예술가</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">위탁 영역</a>
+        <a href="#strengths">운영 강점</a>
+        <a href="#process">도입 절차</a>
+        <a href="#contact" class="nav-cta">무료 현장실사 · 견적 문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">강남 · 서초 · 판교 B2B 공간 위탁관리</div>
+        <h1>호텔 객실 정비와 공유오피스,<br />운영팀이 신경 쓰지 않게 만듭니다.</h1>
+        <p>
+          청소예술가는 부티크 호텔·레지던스와 공유오피스·사옥의 공간 컨디션을 전담 관리하는 위탁 청소 파트너입니다.
+          인력 채용과 결원 대체, 주·야간 교대 스케줄, 월말 정산까지 현장이 끊기지 않도록 한 번에 책임집니다.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">방문 실사 · 위탁 견적 요청하기 →</a>
+          <a href="tel:010-5413-5448" class="btn-secondary">대표 직통 010-5413-5448</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>PARTNER SNAPSHOT</h3>
+        <div class="stat-list">
+          <div class="stat-item">
+            <strong>호텔 · 레지던스 턴어라운드</strong>
+            <span>체크아웃/체크인 타임에 맞춘 객실 정비 · 공용부 관리</span>
+          </div>
+          <div class="stat-item">
+            <strong>공유오피스 상주 · 순회</strong>
+            <span>주간 상주 케어 + 야간 집중 마감 이원화 운영 가능</span>
+          </div>
+          <div class="stat-item">
+            <strong>결원 Zero 대체 인력망</strong>
+            <span>전담 매니저 배정 및 당일 대체 투입 시스템 구축</span>
+          </div>
+          <div class="stat-item">
+            <strong>투명한 정산 · 세금계산서</strong>
+            <span>사업자(298-13-03133) 정식 전자세금계산서 · 계약서 완비</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">SERVICES</span>
+        <h2>공간의 회전율과 브랜드 인상에 맞춘<br />맞춤형 위탁 관리 모델</h2>
+        <p>단순 청소가 아니라, 투숙객과 입주사가 매일 체감하는 공간 완성도를 기준으로 설계합니다.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-icon">🏨</div>
+          <h3>호텔 · 레지던스 · 생활형숙박 위탁청소</h3>
+          <p>체크아웃 직후부터 다음 체크인까지, 촉박한 타임라인 안에서 객실 퀄리티 편차 없이 마감합니다.</p>
+          <ul class="check-list">
+            <li>객실 턴어라운드(베딩 · 욕실 살균 · 어메니티 세팅 · 린넨 수거/교체)</li>
+            <li>로비 · 복도 · 엘리베이터 홀 등 고객 동선 상시 케어</li>
+            <li>투숙률 변동에 맞춘 유동 인력 및 주말/성수기 집중 대응</li>
+            <li>오염 · 파손 이슈 즉시 사진 보고 및 하우스키핑 체크리스트 운영</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>공유오피스 · 코워킹스페이스 정기관리</h3>
+          <p>입주사 수십 곳이 함께 쓰는 라운지·회의실·탕비실·화장실을 하루 종일 쾌적하게 유지합니다.</p>
+          <ul class="check-list">
+            <li>주간 상주조(라운지·탕비실·화장실 순회) + 야간 마감조 맞춤 편성</li>
+            <li>회의실 유리 파티션 · 테이블 지문/얼룩 제거 및 비품 보충</li>
+            <li>입주사 퇴실 시 원상복구 클리닝 및 공실 컨디션 리셋</li>
+            <li>분리수거·음식물·파지 반출 및 바닥 주기적 기계 세척/왁스코팅</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strengths" class="alt-bg">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">WHY CHUNGSO ARTIST</span>
+        <h2>담당자님이 직접 인력을 관리할 때 겪는<br />세 가지 번거로움을 없앱니다</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="pillar">
+          <div class="pillar-num">01 · NO VACANCY</div>
+          <h3>갑작스러운 결원에도 현장은 멈추지 않습니다</h3>
+          <p>현장마다 표준 매뉴얼과 백업 인력풀을 미리 매칭해 두어, 담당자가 아침마다 대체자를 찾는 일을 없앱니다.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02 · DIRECT LINE</div>
+          <h3>대표 · 현장 매니저 직통 핫라인</h3>
+          <p>다단계 하청이나 콜센터 대기가 아니라, 의사결정과 현장 조치가 바로 되는 전담 책임자가 직접 소통합니다.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03 · CLEAN ADMIN</div>
+          <h3>노무 · 정산 · 세무 행정 일괄 처리</h3>
+          <p>근로계약, 일일 근무 명단, 인건비 지급, 월말 전자세금계산서 발행까지 본사 행정 부담을 완벽히 덜어드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">PROCESS</span>
+        <h2>문의부터 현장 안정화까지 4단계</h2>
+        <p>지점 수나 층수, 현재 운영 방식에 맞춰 가장 부담 없는 전환 일정을 제안해 드립니다.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-badge">STEP 01</span>
+          <h4>상담 및 무료 실사</h4>
+          <p>지점 위치, 객실·면적 규모, 현재 불편한 점을 듣고 현장을 직접 방문합니다.</p>
+        </div>
+        <div class="step">
+          <span class="step-badge">STEP 02</span>
+          <h4>인력 · 견적 설계</h4>
+          <p>주간/야간 투입 인원과 동선, 소모품 포함 여부를 반영한 맞춤 견적서를 드립니다.</p>
+        </div>
+        <div class="step">
+          <span class="step-badge">STEP 03</span>
+          <h4>인수인계 · 투입</h4>
+          <p>체크리스트와 보안·출입 동선을 세팅하고 숙련 인력을 현장에 배치합니다.</p>
+        </div>
+        <div class="step">
+          <span class="step-badge">STEP 04</span>
+          <h4>상시 품질 리포팅</h4>
+          <p>정기 점검과 피드백 반영으로 장기적으로 안정적인 공간 컨디션을 유지합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt-bg">
+    <div class="container contact-wrap">
+      <div class="contact-info">
+        <h3>위탁 청소 · 제휴 문의</h3>
+        <p>
+          신규 지점 오픈을 앞두고 계시거나 기존 청소 업체의 퀄리티·결원 문제로 교체를 고민 중이시라면 편하게 연락 주세요.
+          24시간 이내에 담당자가 직접 회신드립니다.
+        </p>
+        <div class="info-rows">
+          <div class="info-row">
+            <small>대표 직통 전화 / 문자</small>
+            <a href="tel:010-5413-5448">010-5413-5448</a>
+          </div>
+          <div class="info-row">
+            <small>제안서 · 견적 문의 이메일</small>
+            <a href="mailto:storygwon@gmail.com">storygwon@gmail.com</a>
+          </div>
+          <div class="info-row">
+            <small>주요 대응 권역</small>
+            <strong>서울 강남 · 서초 · 송파 · 판교/분당 및 수도권 전역</strong>
+          </div>
+        </div>
+      </div>
+
+      <form class="form-card" id="inquiryForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="company">회사 / 지점명 *</label>
+            <input id="company" name="company" type="text" placeholder="예: OO호텔 강남점 / OO스페이스" required />
+          </div>
+          <div class="field">
+            <label for="contactName">담당자 성함 / 직함 *</label>
+            <input id="contactName" name="contactName" type="text" placeholder="예: 김OO 매니저" required />
+          </div>
+          <div class="field">
+            <label for="phone">연락처 *</label>
+            <input id="phone" name="phone" type="tel" placeholder="010-0000-0000" required />
+          </div>
+          <div class="field">
+            <label for="facilityType">시설 유형 *</label>
+            <select id="facilityType" name="facilityType" required>
+              <option value="">선택해 주세요</option>
+              <option value="호텔 · 레지던스 · 숙박시설">호텔 · 레지던스 · 숙박시설</option>
+              <option value="공유오피스 · 코워킹스페이스">공유오피스 · 코워킹스페이스</option>
+              <option value="일반 오피스 · 사옥 · 병의원">일반 오피스 · 사옥 · 병의원</option>
+              <option value="기타 상업공간 · 신규 오픈">기타 상업공간 · 신규 오픈</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="location">위치 및 규모(객실 수 / 평수)</label>
+            <input id="location" name="location" type="text" placeholder="예: 역삼역 인근, 45객실 / 약 300평" />
+          </div>
+          <div class="field">
+            <label for="schedule">희망 운영 형태</label>
+            <select id="schedule" name="schedule">
+              <option value="협의 후 결정">협의 후 결정</option>
+              <option value="주간 상주 관리">주간 상주 관리</option>
+              <option value="야간 / 조조 순회">야간 / 조조 순회</option>
+              <option value="주·야간 교대 상주">주·야간 교대 상주</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="notes">문의 내용 (현재 고민 사항, 희망 시작일 등)</label>
+            <textarea id="notes" name="notes" placeholder="방문 실사 희망 일정이나 필요한 청소 범위를 자유롭게 적어 주세요."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">이메일로 위탁 견적 · 실사 요청 보내기</button>
+        <p class="form-note">버튼을 누르면 입력하신 내용이 메일 앱에 자동 작성되며, 바로 연락처 복사가 완료됩니다.</p>
+        <div class="toast" id="formToast">문의 내용이 정리되었습니다! 메일 창이 열리지 않으면 storygwon@gmail.com 또는 010-5413-5448로 바로 연락 주세요.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong style="color:#fff;">청소예술가</strong> · 대표 최영권 · 사업자등록번호 298-13-03133
+      </div>
+      <div>
+        문의 010-5413-5448 · storygwon@gmail.com
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const company = document.getElementById('company').value.trim();
+      const name = document.getElementById('contactName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const type = document.getElementById('facilityType').value;
+      const loc = document.getElementById('location').value.trim() || '미입력';
+      const sched = document.getElementById('schedule').value;
+      const notes = document.getElementById('notes').value.trim() || '없음';
+
+      const subject = encodeURIComponent(`[위탁청소 문의] ${company} (${type})`);
+      const body = encodeURIComponent(
+        `회사/지점명: ${company}\n담당자: ${name}\n연락처: ${phone}\n시설 유형: ${type}\n위치 및 규모: ${loc}\n희망 운영 형태: ${sched}\n\n문의 내용:\n${notes}`
+      );
+      document.getElementById('formToast').style.display = 'block';
+      window.location.href = `mailto:storygwon@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
