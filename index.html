@@ -5,302 +5,468 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>청소예술가 | 호텔·공유오피스 · 사옥·병의원·전문직 오피스 정기청소</title>
   <meta name="description" content="서울 강남·서초 중심 호텔, 레지던스, 공유오피스, 사옥, 병의원, 로펌·회계·세무법인 정기청소 전문 파트너 청소예술가. 상주·순회 운영부터 인력 대체, 세금계산서 정산까지 원스톱으로 책임집니다." />
+  <meta property="og:title" content="청소예술가 | 공간의 품격을 아는 정기청소 파트너" />
+  <meta property="og:description" content="호텔·레지던스, 공유오피스·사옥, 병의원·전문직 오피스 정기청소. 실제 현장 사진으로 확인하세요." />
+  <meta property="og:image" content="assets/hero-residence-parquet.jpg" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f8fafc;
+      --bg: #f7f6f2;
       --surface: #ffffff;
-      --ink: #0f172a;
-      --muted: #475569;
-      --subtle: #64748b;
-      --line: #e2e8f0;
+      --ink: #101828;
+      --muted: #475467;
+      --subtle: #667085;
+      --line: #e5e3dc;
       --navy: #0b1324;
-      --navy-soft: #16223d;
+      --navy-soft: #17233d;
       --accent: #0f766e;
-      --accent-light: #ccfbf1;
-      --gold: #b45309;
-      --radius: 16px;
+      --accent-soft: #e7f4f1;
+      --gold: #a67c3d;
+      --radius: 18px;
+      --shadow: 0 18px 45px rgba(16, 24, 40, 0.09);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       color: var(--ink);
       background: var(--bg);
-      line-height: 1.65;
+      line-height: 1.68;
       -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
     }
-
     a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .serif { font-family: 'Noto Serif KR', 'Pretendard Variable', serif; }
 
     .container {
       width: 100%;
-      max-width: 1140px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* Header */
+    /* ---------- Header ---------- */
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
+      z-index: 60;
+      background: rgba(247, 246, 242, 0.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229, 227, 220, 0.9);
     }
     .nav {
-      height: 70px;
+      height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
       font-weight: 800;
       font-size: 19px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
       color: var(--navy);
     }
     .brand-badge {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
       background: var(--navy);
-      color: #fff;
+      color: #e7f4f1;
       display: grid;
       place-items: center;
       font-size: 15px;
       font-weight: 700;
+      letter-spacing: 0;
+    }
+    .brand small {
+      display: block;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--subtle);
+      margin-top: -4px;
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
-      font-size: 15px;
+      gap: 30px;
+      font-size: 14.5px;
       font-weight: 600;
       color: var(--muted);
     }
-    .nav-links a:hover { color: var(--navy); }
+    .nav-links a { transition: color .15s ease; }
+    .nav-links a:hover { color: var(--accent); }
     .nav-cta {
-      padding: 10px 18px;
-      border-radius: 10px;
+      padding: 11px 20px;
+      border-radius: 999px;
       background: var(--navy);
       color: #fff !important;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       transition: transform .15s ease, background .15s ease;
     }
-    .nav-cta:hover { background: var(--navy-soft); transform: translateY(-1px); }
+    .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
 
-    /* Hero */
+    /* ---------- Hero ---------- */
     .hero {
-      background: linear-gradient(135deg, #0b1324 0%, #152544 65%, #11343a 100%);
-      color: #fff;
-      padding: 88px 0 80px;
       position: relative;
+      color: #fff;
+      background: var(--navy);
       overflow: hidden;
+      isolation: isolate;
     }
-    .hero::after {
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 62% 45%;
+      filter: saturate(0.92);
+    }
+    .hero::before {
       content: "";
       position: absolute;
-      width: 520px;
-      height: 520px;
-      right: -140px;
-      top: -140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(20, 184, 166, 0.22), transparent 68%);
-      pointer-events: none;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(100deg, rgba(8, 15, 28, 0.94) 0%, rgba(8, 15, 28, 0.82) 42%, rgba(8, 15, 28, 0.35) 72%, rgba(8, 15, 28, 0.55) 100%);
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 48px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
+    .hero-inner {
+      padding: 108px 24px 96px;
+      max-width: 1180px;
+      margin: 0 auto;
     }
+    .hero-copy { max-width: 640px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
+      gap: 10px;
+      padding: 7px 16px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      font-size: 13px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 12.5px;
       font-weight: 600;
-      color: #99f6e4;
-      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+      color: #9fe3d8;
+      margin-bottom: 26px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #2dd4bf;
+      box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.18);
     }
     .hero h1 {
-      font-size: clamp(32px, 4.2vw, 48px);
-      line-height: 1.22;
-      letter-spacing: -0.03em;
+      font-size: clamp(30px, 3.9vw, 50px);
+      line-height: 1.26;
+      letter-spacing: -0.035em;
       font-weight: 800;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
-    .hero p {
-      font-size: 17px;
-      color: #cbd5e1;
-      max-width: 580px;
-      margin-bottom: 32px;
+    .hero h1 em {
+      font-style: normal;
+      color: #5eead4;
+    }
+    .hero p.lead {
+      font-size: 16.5px;
+      line-height: 1.78;
+      color: #d3dae6;
+      max-width: 550px;
+      margin-bottom: 34px;
     }
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-bottom: 42px;
     }
     .btn-primary {
-      padding: 15px 26px;
+      padding: 16px 28px;
       border-radius: 12px;
       background: #14b8a6;
-      color: #042f2e;
+      color: #04231f;
       font-weight: 800;
       font-size: 15px;
       border: none;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
       transition: transform .15s ease, background .15s ease;
     }
-    .btn-primary:hover { background: #2dd4bf; transform: translateY(-1px); }
+    .btn-primary:hover { background: #2dd4bf; transform: translateY(-2px); }
     .btn-secondary {
-      padding: 15px 24px;
+      padding: 16px 24px;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.26);
       color: #fff;
       font-weight: 700;
       font-size: 15px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
+      transition: background .15s ease;
     }
     .btn-secondary:hover { background: rgba(255, 255, 255, 0.14); }
 
-    .hero-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 20px;
-      padding: 28px;
-      backdrop-filter: blur(8px);
-    }
-    .hero-card h3 {
-      font-size: 15px;
-      color: #99f6e4;
-      margin-bottom: 18px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    .stat-list {
+    .hero-facts {
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      padding-top: 26px;
+      max-width: 780px;
     }
-    .stat-item {
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .stat-item strong {
+    .hero-fact { padding-right: 20px; }
+    .hero-fact + .hero-fact { padding-left: 20px; border-left: 1px solid rgba(255, 255, 255, 0.14); }
+    .hero-fact strong {
       display: block;
-      font-size: 17px;
+      font-size: 14.5px;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 2px;
+      letter-spacing: -0.01em;
     }
-    .stat-item span {
-      font-size: 13.5px;
-      color: #cbd5e1;
+    .hero-fact span {
+      display: block;
+      font-size: 12.5px;
+      color: #a7b2c3;
+      margin-top: 3px;
+    }
+    .hero-credit {
+      position: absolute;
+      right: 24px;
+      bottom: 20px;
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.62);
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .hero-credit::before {
+      content: "";
+      width: 22px; height: 1px;
+      background: rgba(255, 255, 255, 0.45);
     }
 
-    /* Sections */
-    section { padding: 80px 0; }
+    /* ---------- Sections ---------- */
+    section { padding: 92px 0; }
     .section-head {
-      max-width: 680px;
-      margin-bottom: 44px;
+      max-width: 700px;
+      margin-bottom: 48px;
     }
     .section-tag {
-      display: inline-block;
-      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--accent);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .section-tag::before {
+      content: "";
+      width: 26px; height: 1px;
+      background: var(--accent);
     }
     .section-head h2 {
-      font-size: clamp(26px, 3vw, 36px);
+      font-size: clamp(25px, 3vw, 36px);
       font-weight: 800;
-      letter-spacing: -0.025em;
-      line-height: 1.28;
-      margin-bottom: 12px;
+      letter-spacing: -0.032em;
+      line-height: 1.34;
+      margin-bottom: 14px;
       color: var(--navy);
     }
     .section-head p {
-      font-size: 16px;
+      font-size: 15.5px;
       color: var(--muted);
     }
 
-    /* Cards Grid */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
+    /* ---------- Gallery ---------- */
+    .gallery-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
     }
+    .gallery-head .section-head { margin-bottom: 0; }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 9px 17px;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+    .filter-btn:hover { border-color: #b9cfc9; color: var(--accent); }
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #fff;
+    }
+
+    .masonry {
+      columns: 3;
+      column-gap: 18px;
+    }
+    figure.case {
+      break-inside: avoid;
+      margin: 0 0 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 6px 20px rgba(16, 24, 40, 0.05);
+      cursor: zoom-in;
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    figure.case:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    figure.case.is-hidden { display: none; }
+    .case-img {
+      position: relative;
+      overflow: hidden;
+      background: #dfe3e0;
+    }
+    .case-img img {
+      width: 100%;
+      height: auto;
+      transition: transform .7s cubic-bezier(.2, .7, .3, 1);
+    }
+    figure.case:hover .case-img img { transform: scale(1.045); }
+    .case-chip {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(11, 19, 36, 0.78);
+      backdrop-filter: blur(6px);
+      color: #e7f4f1;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    figcaption {
+      padding: 16px 18px 18px;
+    }
+    figcaption strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    figcaption span {
+      font-size: 13px;
+      color: var(--subtle);
+      line-height: 1.55;
+    }
+
+    /* ---------- Services ---------- */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
-    .card {
+    .service-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+      overflow: hidden;
+      box-shadow: 0 3px 14px rgba(16, 24, 40, 0.04);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .25s ease, transform .25s ease;
     }
-    .card-icon {
-      width: 46px;
-      height: 46px;
+    .service-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .service-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+    .service-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2, .7, .3, 1);
+    }
+    .service-card:hover .service-media img { transform: scale(1.05); }
+    .service-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11, 19, 36, 0) 45%, rgba(11, 19, 36, 0.55) 100%);
+    }
+    .service-media .icon {
+      position: absolute;
+      left: 18px;
+      bottom: 14px;
+      width: 40px;
+      height: 40px;
       border-radius: 12px;
-      background: #f0fdfa;
-      color: var(--accent);
+      background: rgba(255, 255, 255, 0.92);
       display: grid;
       place-items: center;
-      font-size: 22px;
-      margin-bottom: 18px;
-      border: 1px solid #ccfbf1;
+      font-size: 19px;
+      z-index: 1;
     }
-    .card h3 {
-      font-size: 20px;
+    .service-body { padding: 26px 28px 28px; flex: 1; }
+    .service-body h3 {
+      font-size: 19px;
       font-weight: 800;
       color: var(--navy);
       margin-bottom: 10px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
-    .card p {
-      font-size: 15px;
+    .service-body p {
+      font-size: 14.5px;
       color: var(--muted);
       margin-bottom: 18px;
     }
     .check-list {
       list-style: none;
       display: grid;
-      gap: 8px;
-      font-size: 14.5px;
-      color: #334155;
+      gap: 9px;
+      font-size: 14px;
+      color: #344054;
     }
     .check-list li {
       display: flex;
       align-items: flex-start;
-      gap: 8px;
+      gap: 9px;
+      line-height: 1.55;
     }
     .check-list li::before {
       content: "✓";
@@ -309,92 +475,171 @@
       flex-shrink: 0;
     }
 
-    /* Why Us */
-    .alt-bg { background: #ffffff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    /* ---------- Strengths ---------- */
+    .alt-bg {
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
     .pillar {
-      padding: 26px;
+      padding: 32px 30px;
       border-radius: var(--radius);
       background: var(--bg);
       border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
     }
     .pillar-num {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--accent);
-      margin-bottom: 8px;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
     }
     .pillar h3 {
-      font-size: 18px;
+      font-size: 18.5px;
       font-weight: 800;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: var(--navy);
+      letter-spacing: -0.025em;
+      line-height: 1.42;
     }
     .pillar p {
       font-size: 14.5px;
       color: var(--muted);
     }
+    .pillar::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -60px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(15, 118, 110, 0.08), transparent 70%);
+    }
 
-    /* Process */
+    /* ---------- Process ---------- */
     .steps {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
+      position: relative;
     }
     .step {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 26px 24px;
+      position: relative;
     }
     .step-badge {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 4px 11px;
       border-radius: 999px;
-      background: var(--navy);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
     }
     .step h4 {
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 800;
       margin-bottom: 8px;
       color: var(--navy);
+      letter-spacing: -0.02em;
     }
     .step p {
-      font-size: 14px;
+      font-size: 13.8px;
       color: var(--muted);
     }
 
-    /* Contact Section */
+    /* ---------- Quote band ---------- */
+    .quote-band {
+      background: var(--navy);
+      color: #fff;
+      padding: 72px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .quote-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 82% 20%, rgba(20, 184, 166, 0.22), transparent 55%);
+    }
+    .quote-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .quote-band h2 {
+      font-size: clamp(23px, 2.6vw, 31px);
+      line-height: 1.46;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+    .quote-band h2 strong { font-weight: 800; color: #5eead4; }
+    .quote-band p {
+      font-size: 14.5px;
+      color: #c3ccd9;
+      margin-top: 14px;
+    }
+    .quote-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      aspect-ratio: 4 / 3;
+    }
+    .quote-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ---------- Contact ---------- */
     .contact-wrap {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 36px;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 32px;
       align-items: start;
     }
     .contact-info {
       background: var(--navy);
       color: #fff;
       border-radius: 20px;
-      padding: 36px;
+      padding: 38px 34px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-info::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.2), transparent 68%);
     }
     .contact-info h3 {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 800;
       margin-bottom: 12px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      position: relative;
     }
     .contact-info p {
-      color: #cbd5e1;
-      font-size: 15px;
+      color: #c3ccd9;
+      font-size: 14.5px;
       margin-bottom: 28px;
+      position: relative;
     }
     .info-rows {
       display: grid;
-      gap: 16px;
-      margin-bottom: 28px;
+      gap: 12px;
+      margin-bottom: 26px;
+      position: relative;
     }
     .info-row {
       background: rgba(255, 255, 255, 0.06);
@@ -404,34 +649,60 @@
     }
     .info-row small {
       display: block;
-      font-size: 12px;
-      color: #99f6e4;
+      font-size: 11.5px;
+      color: #7dd3c7;
       font-weight: 700;
-      margin-bottom: 2px;
+      letter-spacing: 0.04em;
+      margin-bottom: 3px;
     }
     .info-row strong, .info-row a {
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 700;
       color: #fff;
     }
+    .info-row a:hover { color: #5eead4; }
+    .contact-badge {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      font-size: 12.5px;
+      color: #a7b2c3;
+      line-height: 1.5;
+    }
+    .contact-badge b { color: #fff; font-weight: 700; }
 
     .form-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 20px;
-      padding: 36px;
-      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
+      padding: 38px 34px;
+      box-shadow: 0 10px 34px rgba(16, 24, 40, 0.06);
+    }
+    .form-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .form-card .form-sub {
+      font-size: 13.5px;
+      color: var(--subtle);
+      margin-bottom: 24px;
     }
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 0 16px;
     }
     .field { margin-bottom: 16px; }
     .field.full { grid-column: 1 / -1; }
     label {
       display: block;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--navy);
       margin-bottom: 6px;
@@ -440,37 +711,40 @@
       width: 100%;
       padding: 12px 14px;
       border-radius: 10px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #d6d8db;
       font-family: inherit;
       font-size: 14.5px;
       color: var(--ink);
       background: #fff;
       transition: border-color .15s ease, box-shadow .15s ease;
     }
+    input::placeholder, textarea::placeholder { color: #9aa3ae; }
     input:focus, select:focus, textarea:focus {
       outline: none;
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.13);
     }
-    textarea { min-height: 110px; resize: vertical; }
+    textarea { min-height: 108px; resize: vertical; }
     .submit-btn {
       width: 100%;
-      padding: 15px 20px;
+      padding: 16px 20px;
       border-radius: 12px;
       background: var(--navy);
       color: #fff;
-      font-size: 15.5px;
+      font-family: inherit;
+      font-size: 15px;
       font-weight: 800;
       border: none;
       cursor: pointer;
-      transition: background .15s ease;
+      transition: background .15s ease, transform .15s ease;
     }
-    .submit-btn:hover { background: var(--navy-soft); }
+    .submit-btn:hover { background: var(--accent); transform: translateY(-1px); }
     .form-note {
       margin-top: 12px;
-      font-size: 13px;
+      font-size: 12.5px;
       color: var(--subtle);
       text-align: center;
+      line-height: 1.5;
     }
     .toast {
       display: none;
@@ -480,30 +754,128 @@
       background: #ecfdf5;
       border: 1px solid #a7f3d0;
       color: #065f46;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
     }
 
+    /* ---------- Footer ---------- */
     footer {
       background: #0b1324;
       color: #94a3b8;
-      padding: 36px 0;
-      font-size: 13.5px;
+      padding: 46px 0 38px;
+      font-size: 13px;
     }
-    .footer-inner {
+    .footer-top {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 16px;
+      gap: 22px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 22px;
+    }
+    .footer-brand {
+      display: flex;
       align-items: center;
+      gap: 11px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+    }
+    .footer-brand .brand-badge { background: #14b8a6; color: #04231f; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 13px;
+      color: #a7b2c3;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      line-height: 1.7;
+    }
+    .footer-meta b { color: #cbd5e1; font-weight: 600; }
+
+    /* ---------- Lightbox ---------- */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(6, 11, 21, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      backdrop-filter: blur(6px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox figure { max-width: min(1080px, 94vw); text-align: center; }
+    .lightbox img {
+      max-height: 78vh;
+      width: auto;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    }
+    .lightbox figcaption {
+      color: #cbd5e1;
+      font-size: 13.5px;
+      margin-top: 16px;
+      padding: 0;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 22px;
+      right: 26px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .lightbox-close:hover { background: rgba(255, 255, 255, 0.18); }
+
+    /* ---------- Reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
     }
 
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1024px) {
+      .masonry { columns: 2; }
+      .hero-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+      .hero-fact:nth-child(3) { padding-left: 0; border-left: none; }
+    }
     @media (max-width: 900px) {
-      .hero-grid, .grid-2, .grid-3, .steps, .contact-wrap {
-        grid-template-columns: 1fr;
-      }
+      .grid-3, .steps, .contact-wrap, .quote-inner { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .form-grid { grid-template-columns: 1fr; }
+      .hero-inner { padding: 84px 24px 78px; }
+      .hero-credit { display: none; }
+      section { padding: 68px 0; }
+      .quote-photo { max-width: 460px; }
+    }
+    @media (max-width: 640px) {
+      .masonry { columns: 1; }
+      .hero h1 { font-size: 30px; }
+      .hero-facts { grid-template-columns: 1fr; }
+      .hero-fact + .hero-fact { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
+      .contact-info, .form-card { padding: 28px 22px; }
     }
   </style>
 </head>
@@ -511,11 +883,12 @@
 
   <header>
     <div class="container nav">
-      <a href="#" class="brand">
+      <a href="#top" class="brand">
         <span class="brand-badge">청</span>
-        <span>청소예술가</span>
+        <span>청소예술가<small>CHUNGSO ARTIST</small></span>
       </a>
       <nav class="nav-links">
+        <a href="#cases">현장 포토</a>
         <a href="#services">위탁 영역</a>
         <a href="#strengths">운영 강점</a>
         <a href="#process">도입 절차</a>
@@ -524,12 +897,15 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
+  <section class="hero" id="top">
+    <div class="hero-media">
+      <img src="assets/hero-residence-parquet.jpg" alt="레지던스 거실의 파케이 바닥을 정밀 물세척하는 청소예술가 작업자" width="1600" height="1200" fetchpriority="high" />
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy">
         <div class="eyebrow">강남 · 서초 · 판교 B2B 공간 위탁 · 정기청소</div>
-        <h1>호텔·공유오피스부터<br />사옥·병의원·전문직 오피스까지,<br />청소는 완전히 손 떼세요.</h1>
-        <p>
+        <h1>호텔·공유오피스부터<br />사옥·병의원·전문직 오피스까지,<br /><em>청소는 완전히 손 떼세요.</em></h1>
+        <p class="lead">
           청소예술가는 호텔·레지던스와 공유오피스, 기업 사옥, 병의원, 로펌·회계·세무법인까지
           공간의 품격과 보안이 중요한 현장을 전담 관리하는 정기청소 파트너입니다.
           인력 채용과 결원 대체, 주·야간 스케줄, 월말 정산까지 현장이 끊기지 않게 책임집니다.
@@ -538,33 +914,162 @@
           <a href="#contact" class="btn-primary">방문 실사 · 위탁 견적 요청하기 →</a>
           <a href="tel:010-5413-5448" class="btn-secondary">대표 직통 010-5413-5448</a>
         </div>
-      </div>
-
-      <div class="hero-card">
-        <h3>PARTNER SNAPSHOT</h3>
-        <div class="stat-list">
-          <div class="stat-item">
-            <strong>호텔 · 레지던스 턴어라운드</strong>
-            <span>체크아웃/체크인 타임에 맞춘 객실 정비 · 공용부 관리</span>
+        <div class="hero-facts">
+          <div class="hero-fact">
+            <strong>호텔 · 레지던스</strong>
+            <span>체크인·체크아웃 타임 맞춤 객실 정비</span>
           </div>
-          <div class="stat-item">
-            <strong>공유오피스 상주 · 순회</strong>
-            <span>주간 상주 케어 + 야간 집중 마감 이원화 운영 가능</span>
+          <div class="hero-fact">
+            <strong>공유오피스 · 사옥</strong>
+            <span>상주 · 순회 이원화 운영</span>
           </div>
-          <div class="stat-item">
-            <strong>사옥 · 병의원 · 전문직 오피스</strong>
-            <span>로펌 · 회계·세무법인 · 병의원 보안·위생 기준 맞춤 정기청소</span>
+          <div class="hero-fact">
+            <strong>병의원 · 전문직</strong>
+            <span>위생 · 보안 기준 맞춤 배치</span>
           </div>
-          <div class="stat-item">
-            <strong>투명한 정산 · 세금계산서</strong>
-            <span>사업자(298-13-03133) 정식 전자세금계산서 · 계약서 완비</span>
+          <div class="hero-fact">
+            <strong>정식 세금계산서</strong>
+            <span>사업자 298-13-03133</span>
           </div>
         </div>
       </div>
     </div>
+    <div class="hero-credit">실제 현장 · 레지던스 거실 바닥 정밀 세척</div>
   </section>
 
-  <section id="services">
+  <section id="cases">
+    <div class="container">
+      <div class="gallery-head">
+        <div class="section-head">
+          <span class="section-tag">FIELD GALLERY</span>
+          <h2>말보다 사진으로 보여드립니다</h2>
+          <p>호텔·레지던스, 공유오피스·사옥, 병의원 현장에서 청소예술가가 직접 작업한 장면입니다. 같은 공간을 매일 같은 기준으로 관리하는 것이 저희의 방식입니다.</p>
+        </div>
+      </div>
+
+      <div class="filters" role="group" aria-label="현장 사진 분류">
+        <button type="button" class="filter-btn active" data-filter="all">전체</button>
+        <button type="button" class="filter-btn" data-filter="stay">호텔 · 레지던스</button>
+        <button type="button" class="filter-btn" data-filter="office">공유오피스 · 사옥</button>
+        <button type="button" class="filter-btn" data-filter="clinic">병의원 · 전문직</button>
+        <button type="button" class="filter-btn" data-filter="special">카펫 · 특수</button>
+      </div>
+
+      <div class="masonry" id="caseGrid">
+        <figure class="case" data-cat="stay">
+          <div class="case-img">
+            <img src="assets/case-residence-study.jpg" alt="레지던스 서재에서 집기 주변과 바닥을 청소하는 작업자" width="1200" height="1600" loading="lazy" />
+            <span class="case-chip">레지던스</span>
+          </div>
+          <figcaption>
+            <strong>레지던스 서재 · 집기 주변 정밀 청소</strong>
+            <span>파케이 바닥과 가구 사이 먼지까지, 손이 닿는 모든 면을 마감합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="office">
+          <div class="case-img">
+            <img src="assets/case-office-meeting.jpg" alt="공유오피스 유리 회의실 내부 청소 마감 장면" width="1200" height="1600" loading="lazy" />
+            <span class="case-chip">공유오피스</span>
+          </div>
+          <figcaption>
+            <strong>공유오피스 회의실 · 유리 파티션 마감</strong>
+            <span>유리벽 지문과 얼룩, 테이블·의자 배열까지 다음 예약 전에 정리합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="stay">
+          <div class="case-img">
+            <img src="assets/case-residence-living.jpg" alt="입주 전 레지던스 거실에서 소파 주변을 청소하는 작업자" width="1200" height="900" loading="lazy" />
+            <span class="case-chip">레지던스</span>
+          </div>
+          <figcaption>
+            <strong>입주 전 레지던스 거실 · 마감 청소</strong>
+            <span>창호와 채광, 소파 라인까지 눈에 보이는 그대로 정돈합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="office">
+          <div class="case-img">
+            <img src="assets/case-office-ceiling-ac.jpg" alt="사무실 천장형 에어컨을 사다리에서 분해 세척하는 작업자" width="1200" height="1600" loading="lazy" />
+            <span class="case-chip">사옥 · 사무실</span>
+          </div>
+          <figcaption>
+            <strong>사무실 천장형 에어컨 분해 세척</strong>
+            <span>필터·송풍구를 분해해 세척하고, 냄새와 먼지 발생원을 함께 정리합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="stay">
+          <div class="case-img">
+            <img src="assets/case-residence-villa.jpg" alt="단독주택 테라스와 거실 창호를 물세척하는 작업자" width="1200" height="900" loading="lazy" />
+            <span class="case-chip">레지던스 · 주택</span>
+          </div>
+          <figcaption>
+            <strong>주택 테라스 · 창호 물세척</strong>
+            <span>유리와 창틀, 테라스 바닥까지 물세척으로 마감합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="clinic">
+          <div class="case-img">
+            <img src="assets/case-clinic-floor.jpg" alt="병의원 내부 바닥을 스크러버 장비로 세척하는 모습" width="1200" height="1600" loading="lazy" />
+            <span class="case-chip">병의원</span>
+          </div>
+          <figcaption>
+            <strong>병의원 진료 공간 · 바닥 기계 세척</strong>
+            <span>진료 시작 전, 환자 동선이 닿는 바닥을 장비로 깊게 세척합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="office">
+          <div class="case-img">
+            <img src="assets/case-facade-stone.jpg" alt="사옥 석재 외벽과 로비 벽면을 물세척하는 작업자" width="1200" height="900" loading="lazy" />
+            <span class="case-chip">사옥</span>
+          </div>
+          <figcaption>
+            <strong>사옥 석재 벽면 · 로비 물세척</strong>
+            <span>출입구와 로비 석재, 눈에 띄는 오염을 먼저 잡습니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="office">
+          <div class="case-img">
+            <img src="assets/case-office-lounge.jpg" alt="공유오피스 라운지의 유리벽과 집기 청소 장면" width="1200" height="1600" loading="lazy" />
+            <span class="case-chip">공유오피스</span>
+          </div>
+          <figcaption>
+            <strong>공유오피스 라운지 · 유리벽 케어</strong>
+            <span>입주사가 하루 종일 마주하는 유리벽과 공용 집기를 관리합니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="clinic">
+          <div class="case-img">
+            <img src="assets/case-clinic-detail.jpg" alt="병의원 바닥 모서리까지 장비로 세척하는 디테일 작업" width="1200" height="1600" loading="lazy" />
+            <span class="case-chip">병의원</span>
+          </div>
+          <figcaption>
+            <strong>병의원 바닥 · 모서리 디테일</strong>
+            <span>벽면과 맞닿은 모서리, 눈에 덜 띄는 구간을 따로 챙깁니다.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="case" data-cat="special">
+          <div class="case-img">
+            <img src="assets/case-stair-carpet.jpg" alt="건물 계단 카펫을 장비로 딥클리닝하는 작업자" width="1200" height="900" loading="lazy" />
+            <span class="case-chip">카펫 · 계단</span>
+          </div>
+          <figcaption>
+            <strong>계단 카펫 · 딥클리닝</strong>
+            <span>발 디딤이 잦은 계단 카펫을 장비로 세척해 오염과 냄새를 줄입니다.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="alt-bg">
     <div class="container">
       <div class="section-head">
         <span class="section-tag">SERVICES</span>
@@ -573,46 +1078,61 @@
       </div>
 
       <div class="grid-3">
-        <div class="card">
-          <div class="card-icon">🏨</div>
-          <h3>호텔 · 레지던스 · 숙박 위탁</h3>
-          <p>체크아웃부터 체크인까지 촉박한 타임라인 안에서도 객실 퀄리티 편차 없이 마감합니다.</p>
-          <ul class="check-list">
-            <li>객실 턴어라운드(베딩 · 욕실 살균 · 어메니티 · 린넨 교체)</li>
-            <li>로비 · 복도 · 엘리베이터 홀 고객 동선 상시 케어</li>
-            <li>투숙률 · 성수기에 맞춘 주말/유동 인력 탄력 대응</li>
-            <li>오염 · 파손 이슈 즉시 사진 보고 및 체크리스트 운영</li>
-          </ul>
-        </div>
+        <article class="service-card">
+          <div class="service-media">
+            <img src="assets/case-residence-living.jpg" alt="레지던스 거실 마감 청소" width="1200" height="900" loading="lazy" />
+            <span class="icon">🏨</span>
+          </div>
+          <div class="service-body">
+            <h3>호텔 · 레지던스 · 숙박 위탁</h3>
+            <p>체크아웃부터 체크인까지 촉박한 타임라인 안에서도 객실 퀄리티 편차 없이 마감합니다.</p>
+            <ul class="check-list">
+              <li>객실 턴어라운드(베딩 · 욕실 살균 · 어메니티 · 린넨 교체)</li>
+              <li>로비 · 복도 · 엘리베이터 홀 고객 동선 상시 케어</li>
+              <li>투숙률 · 성수기에 맞춘 주말/유동 인력 탄력 대응</li>
+              <li>오염 · 파손 이슈 즉시 사진 보고 및 체크리스트 운영</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="card">
-          <div class="card-icon">🏢</div>
-          <h3>공유오피스 · 사옥 · 일반 사무실</h3>
-          <p>임직원과 입주사가 함께 쓰는 공용부·회의실·탕비실·화장실을 하루 종일 쾌적하게 유지합니다.</p>
-          <ul class="check-list">
-            <li>주간 상주 케어 + 야간/조조 집중 마감 맞춤 편성</li>
-            <li>회의실 유리 파티션 · 탕비실 · 화장실 위생 관리</li>
-            <li>분리수거 · 파지 반출 및 주기적 바닥 기계 세척 · 왁스코팅</li>
-            <li>입주사 퇴실 시 원상복구 클리닝 및 공실 리셋</li>
-          </ul>
-        </div>
+        <article class="service-card">
+          <div class="service-media">
+            <img src="assets/case-office-lounge.jpg" alt="공유오피스 라운지 유리벽 청소" width="1200" height="1600" loading="lazy" />
+            <span class="icon">🏢</span>
+          </div>
+          <div class="service-body">
+            <h3>공유오피스 · 사옥 · 일반 사무실</h3>
+            <p>임직원과 입주사가 함께 쓰는 공용부·회의실·탕비실·화장실을 하루 종일 쾌적하게 유지합니다.</p>
+            <ul class="check-list">
+              <li>주간 상주 케어 + 야간/조조 집중 마감 맞춤 편성</li>
+              <li>회의실 유리 파티션 · 탕비실 · 화장실 위생 관리</li>
+              <li>분리수거 · 파지 반출 및 주기적 바닥 기계 세척 · 왁스코팅</li>
+              <li>입주사 퇴실 시 원상복구 클리닝 및 공실 리셋</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="card">
-          <div class="card-icon">⚖️</div>
-          <h3>병의원 · 로펌 · 회계·세무법인</h3>
-          <p>고객 응대와 보안이 최우선인 전문직 오피스·의료기관에 맞춰 검증된 고정 인력을 배치합니다.</p>
-          <ul class="check-list">
-            <li>보안 · 출입 동선 엄수 및 비밀유지(NDA) 기준 운영</li>
-            <li>대기실 · 접견실 · 임원실 · 상담실 프리미엄 마감</li>
-            <li>병의원 진료실 · 처치실 · 화장실 항균 살균 및 냄새 관리</li>
-            <li>업무 방해 없는 야간 · 출근 전 조조 정기청소 스케줄링</li>
-          </ul>
-        </div>
+        <article class="service-card">
+          <div class="service-media">
+            <img src="assets/case-clinic-floor.jpg" alt="병의원 바닥 스크러버 세척" width="1200" height="1600" loading="lazy" />
+            <span class="icon">⚖️</span>
+          </div>
+          <div class="service-body">
+            <h3>병의원 · 로펌 · 회계·세무법인</h3>
+            <p>고객 응대와 보안이 최우선인 전문직 오피스·의료기관에 맞춰 검증된 고정 인력을 배치합니다.</p>
+            <ul class="check-list">
+              <li>보안 · 출입 동선 엄수 및 비밀유지(NDA) 기준 운영</li>
+              <li>대기실 · 접견실 · 임원실 · 상담실 프리미엄 마감</li>
+              <li>병의원 진료실 · 처치실 · 화장실 항균 살균 및 냄새 관리</li>
+              <li>업무 방해 없는 야간 · 출근 전 조조 정기청소 스케줄링</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="strengths" class="alt-bg">
+  <section id="strengths">
     <div class="container">
       <div class="section-head">
         <span class="section-tag">WHY CHUNGSO ARTIST</span>
@@ -635,6 +1155,18 @@
           <h3>노무 · 정산 · 세무 행정 일괄 처리</h3>
           <p>근로계약, 일일 근무 명단, 인건비 지급, 월말 전자세금계산서 발행까지 본사 행정 부담을 완벽히 덜어드립니다.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container quote-inner">
+      <div>
+        <h2 class="serif">“청소의 완성도는<br /><strong>사진 한 장으로 증명됩니다.</strong>”</h2>
+        <p>작업 전후 상태를 사진으로 남기고, 현장 체크리스트로 같은 기준을 반복합니다. 보이지 않는 구간까지 확인할 수 있도록, 저희는 매일의 현장을 기록합니다.</p>
+      </div>
+      <div class="quote-photo">
+        <img src="assets/case-residence-study.jpg" alt="레지던스 서재 정밀 청소 현장" width="1200" height="1600" loading="lazy" />
       </div>
     </div>
   </section>
@@ -694,9 +1226,16 @@
             <strong>서울 강남 · 서초 · 송파 · 판교/분당 및 수도권 전역</strong>
           </div>
         </div>
+        <div class="contact-badge">
+          <span>사업자등록번호 <b>298-13-03133</b></span>
+          <span>·</span>
+          <span>대표 <b>최영권</b></span>
+        </div>
       </div>
 
       <form class="form-card" id="inquiryForm">
+        <h3>현장 실사 · 견적 요청</h3>
+        <p class="form-sub">아래 내용을 남겨 주시면 24시간 이내에 담당자가 직접 연락드립니다.</p>
         <div class="form-grid">
           <div class="field">
             <label for="company">회사 / 지점명 *</label>
@@ -748,33 +1287,117 @@
   </section>
 
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong style="color:#fff;">청소예술가</strong> · 대표 최영권 · 사업자등록번호 298-13-03133
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-badge">청</span>
+          <span>청소예술가</span>
+        </div>
+        <div class="footer-links">
+          <a href="#cases">현장 포토</a>
+          <a href="#services">위탁 영역</a>
+          <a href="#strengths">운영 강점</a>
+          <a href="#process">도입 절차</a>
+          <a href="#contact">견적 문의</a>
+        </div>
       </div>
-      <div>
-        문의 010-5413-5448 · storygwon@gmail.com
+      <div class="footer-meta">
+        <span><b>청소예술가</b> · 대표 최영권 · 사업자등록번호 298-13-03133</span>
+        <span>문의 <a href="tel:010-5413-5448">010-5413-5448</a> · <a href="mailto:storygwon@gmail.com">storygwon@gmail.com</a></span>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const company = document.getElementById('company').value.trim();
-      const name = document.getElementById('contactName').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const type = document.getElementById('facilityType').value;
-      const loc = document.getElementById('location').value.trim() || '미입력';
-      const sched = document.getElementById('schedule').value;
-      const notes = document.getElementById('notes').value.trim() || '없음';
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="현장 사진 크게 보기">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="닫기">✕</button>
+    <figure>
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
 
-      const subject = encodeURIComponent(`[위탁청소 문의] ${company} (${type})`);
-      const body = encodeURIComponent(
-        `회사/지점명: ${company}\n담당자: ${name}\n연락처: ${phone}\n시설 유형: ${type}\n위치 및 규모: ${loc}\n희망 운영 형태: ${sched}\n\n문의 내용:\n${notes}`
+  <script>
+    // 현장 사진 필터
+    (function () {
+      var buttons = document.querySelectorAll('.filter-btn');
+      var cases = document.querySelectorAll('#caseGrid .case');
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var f = btn.getAttribute('data-filter');
+          cases.forEach(function (c) {
+            c.classList.toggle('is-hidden', f !== 'all' && c.getAttribute('data-cat') !== f);
+          });
+        });
+      });
+    })();
+
+    // 라이트박스
+    (function () {
+      var box = document.getElementById('lightbox');
+      var img = document.getElementById('lightboxImg');
+      var cap = document.getElementById('lightboxCaption');
+      var closeBtn = document.getElementById('lightboxClose');
+
+      document.querySelectorAll('#caseGrid .case').forEach(function (fig) {
+        fig.addEventListener('click', function () {
+          var src = fig.querySelector('img');
+          var title = fig.querySelector('figcaption strong');
+          img.src = src.getAttribute('src');
+          img.alt = src.getAttribute('alt') || '';
+          cap.textContent = title ? title.textContent : '';
+          box.classList.add('open');
+          box.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function close() {
+        box.classList.remove('open');
+        box.setAttribute('aria-hidden', 'true');
+        img.src = '';
+        document.body.style.overflow = '';
+      }
+      closeBtn.addEventListener('click', close);
+      box.addEventListener('click', function (e) { if (e.target === box) close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+
+    // 스크롤 등장 효과
+    (function () {
+      if (!('IntersectionObserver' in window)) return;
+      var targets = document.querySelectorAll('.section-head, .case, .service-card, .pillar, .step, .quote-inner, .contact-wrap > *');
+      targets.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+
+    // 견적 문의 폼
+    document.getElementById('inquiryForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var company = document.getElementById('company').value.trim();
+      var name = document.getElementById('contactName').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var type = document.getElementById('facilityType').value;
+      var loc = document.getElementById('location').value.trim() || '미입력';
+      var sched = document.getElementById('schedule').value;
+      var notes = document.getElementById('notes').value.trim() || '없음';
+
+      var subject = encodeURIComponent('[위탁청소 문의] ' + company + ' (' + type + ')');
+      var body = encodeURIComponent(
+        '회사/지점명: ' + company + '\n담당자: ' + name + '\n연락처: ' + phone + '\n시설 유형: ' + type +
+        '\n위치 및 규모: ' + loc + '\n희망 운영 형태: ' + sched + '\n\n문의 내용:\n' + notes
       );
       document.getElementById('formToast').style.display = 'block';
-      window.location.href = `mailto:storygwon@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = 'mailto:storygwon@gmail.com?subject=' + subject + '&body=' + body;
     });
   </script>
 </body>
