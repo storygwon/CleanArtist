@@ -72,10 +72,10 @@
     /* 첫 화면 */
     .hero { position: relative; color: #fff; background: var(--navy); overflow: hidden; isolation: isolate; }
     .hero-media { position: absolute; inset: 0; z-index: -2; }
-    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 55%; filter: saturate(0.94); }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 52%; filter: saturate(0.98) brightness(1.14); }
     .hero::before {
       content: ""; position: absolute; inset: 0; z-index: -1;
-      background: linear-gradient(100deg, rgba(8,15,28,.95) 0%, rgba(8,15,28,.84) 42%, rgba(8,15,28,.46) 68%, rgba(8,15,28,.22) 100%);
+      background: linear-gradient(100deg, rgba(8,15,28,.93) 0%, rgba(8,15,28,.78) 40%, rgba(8,15,28,.38) 68%, rgba(8,15,28,.14) 100%);
     }
     .hero-inner { padding: 106px 24px 94px; max-width: 1180px; margin: 0 auto; }
     .hero-copy { max-width: 650px; }
@@ -108,7 +108,7 @@
     .hero-fact { padding-right: 20px; }
     .hero-fact + .hero-fact { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.14); }
     .hero-fact strong { display: block; font-size: 14.5px; font-weight: 700; color: #fff; }
-    .hero-fact span { display: block; font-size: 12.5px; color: #a7b2c3; margin-top: 3px; }
+    .hero-fact span { display: block; font-size: 12.5px; color: #c2ccda; margin-top: 3px; }
     .hero-credit {
       position: absolute; right: 24px; bottom: 20px; font-size: 11.5px; color: rgba(255,255,255,.62);
       display: flex; align-items: center; gap: 7px;
